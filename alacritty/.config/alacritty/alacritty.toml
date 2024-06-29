@@ -1,0 +1,46 @@
+[window.padding]
+  x = 4
+  y = 4
+
+[font]
+  size = 12
+
+[font.normal]
+  family = "JetBrains Mono Nerd Font"
+  style = "Regular"
+
+[font.bold]
+  family = "JetBrains Mono Nerd Font"
+  style = "Bold"
+
+[font.italic]
+  family = "JetBrains Mono Nerd Font"
+  style = "Italic"
+
+[font.bold_italic]
+  family = "JetBrains Mono Nerd Font"
+  style = "Bold Italic"
+
+[colors.primary]
+  foreground = "#cdd6f4"
+  background = "#0a0a0a"
+
+[colors.bright]
+  black = "#585b70"
+  red = "#f38ba8"
+  green = "#a6e3a1"
+  yellow = "#f9e2af"
+  blue = "#89b4fa"
+  magenta = "#f5c2e7"
+  cyan = "#7dcfff"
+  white = "#f4f4f5"
+
+[colors.normal]
+  black = "#45475a"
+  red = "#ef688e"
+  green = "#8ada83"
+  yellow = "#f6d488"
+  blue = "#649cf8"
+  magenta = "#ef9cd8"
+  cyan = "#57c1ff"
+  white = "#e4e4e7"
