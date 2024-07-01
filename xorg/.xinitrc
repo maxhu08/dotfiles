@@ -8,4 +8,4 @@ xset -dpms
 feh --bg-scale ~/Pictures/wallpapers/walls/island-night.png && \
 dwm & \
 slstatus & \
-picom
+picom --animations
