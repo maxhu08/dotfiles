@@ -86,7 +86,6 @@ set QT_QPA_PLATFORM xcb
 
 alias ls "exa --icons"
 alias treelist "tree -a -I '.git'"
-alias fetch "fastfetch --localip-show-ipv4 false"
 
 # TokyoNight Color Palette from https://github.com/folke/tokyonight.nvim/blob/main/extras/fish/tokyonight_storm.fish
 set -l foreground c0caf5
