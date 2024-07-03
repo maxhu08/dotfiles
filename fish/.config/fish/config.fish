@@ -74,7 +74,7 @@ end
 set -x PATH $PATH:/usr/local/bin:/opt/bin
 
 # set editor
-set -x EDITOR "code"
+set -x EDITOR "vim"
 
 set QT_QPA_PLATFORM xcb
 
