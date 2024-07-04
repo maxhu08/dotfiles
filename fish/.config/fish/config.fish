@@ -84,7 +84,7 @@ set QT_QPA_PLATFORM xcb
 # --color=fg:#ffffff,hl:#00ff00,fg+:#a5b4fc,bg+:#737373,hl+:#ffff00,info:#14b8a6,spinner:#00ffff,pointer:#f59e0b
 # "
 
-alias ls "exa --icons"
+alias ls "eza --icons"
 alias treelist "tree -a -I '.git'"
 
 # TokyoNight Color Palette from https://github.com/folke/tokyonight.nvim/blob/main/extras/fish/tokyonight_storm.fish
