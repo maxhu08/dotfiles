@@ -21,14 +21,6 @@ git clone https://github.com/maxhu08/dotfiles
 cd dotfiles
 ```
 
-You will also need to change the `.stowrc` file to set the target to your home directory. By default it's set to the user `mh`
-
-```shell
-# .stowrc
-
---target=/home/mh
-```
-
 After that, you just need to run the stow command to symlink the dotfiles you want
 
 ```shell
