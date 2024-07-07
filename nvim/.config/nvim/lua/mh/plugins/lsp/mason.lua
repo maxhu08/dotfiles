@@ -51,6 +51,8 @@ return {
 				"clang-format", -- c formatter
 				"pylint",
 				"eslint_d",
+				"rust_analyzer", -- Rust Analyzer
+				"rustfmt", -- Rust Format
 			},
 		})
 	end,
