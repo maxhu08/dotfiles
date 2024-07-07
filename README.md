@@ -1,6 +1,7 @@
 # dotfiles
 
-> **NOTICE** If you are looking for my old dotfiles (which do not use stow), you can find them in https://github.com/maxhu08/dotfiles-old
+> [!IMPORTANT]
+> If you are looking for my old dotfiles (which do not use stow), you can find them in https://github.com/maxhu08/dotfiles-old
 
 This repo contains all my configs I use.
 
@@ -22,6 +23,9 @@ cd dotfiles
 ```
 
 After that, you just need to run the stow command to symlink the dotfiles you want
+
+> [!CAUTION]
+> I would not recommend stowing stuff like `git` because that contains my .gitconfig or `xorg` because thats specific to my monitor setup
 
 ```shell
 # you can stow multiple things in one command!
