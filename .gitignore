@@ -1,0 +1,7 @@
+# ignore everything in the vscode folder
+vscode/*
+
+# except settings.json & keybindings.json
+!vscode/.config/Code/User/settings.json
+!vscode/.config/Code/User/keybindings.json
+
