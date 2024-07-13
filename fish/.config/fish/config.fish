@@ -11,10 +11,10 @@ function fish_user_key_bindings
   bind -M insert -m default kj backward-char force-repaint
 end
 
-# remove default clock
-function fish_right_prompt
-  echo (set_color 71717a)"$USER"@(prompt_hostname)
-end
+# UNCOMMENT FOR RIGHT PROMPT 
+# function fish_right_prompt
+#   echo (set_color 71717a)"$USER"@(prompt_hostname)
+# end
 
 # indicator for vi
 function fish_mode_prompt
