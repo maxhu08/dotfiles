@@ -7,6 +7,7 @@ xset -dpms
 xrdb -merge ~/.Xresources
 
 feh --bg-scale ~/Pictures/wallpapers/walls/wind-turbines.png && \
+# dbus-run-session dwm & \
 dwm & \
 slstatus & \
 picom
