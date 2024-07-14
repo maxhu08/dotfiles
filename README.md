@@ -41,10 +41,15 @@ paru -S \
   tmux vim neovim ripgrep fzf zoxide \
   xorg-server xorg-xinit \
   xorg-xrandr xf86-input-libinput \
+  xorg-xrdb xorg-xset \
   feh picom-simpleanims-git \
   materia-gtk-theme bibata-cursor-theme-bin \
   papirus-icon-theme papirus-folders-git \
-  visual-studio-code-bin nemo brave-bin
+  noto-fonts ttf-roboto \
+  ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
+  ttf-apple-emoji \
+  visual-studio-code-bin nemo brave-bin \
+  obs-studio pavucontrol \
 ```
 
 That's it!
