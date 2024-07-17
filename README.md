@@ -54,6 +54,8 @@ paru -S \
 
 That's it!
 
+> [!CAUTION] If you are Ubuntu `build-essential` `fzf` `python3-all-venv` `nodejs` & `npm` must be installed before running `stow nvim` & `nvim`
+
 ## star-history
 
 [![Star History Chart](https://api.star-history.com/svg?repos=maxhu08/dotfiles&type=Date)](https://star-history.com/#maxhu08/dotfiles&Date)
