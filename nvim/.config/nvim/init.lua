@@ -40,9 +40,9 @@ end)
 
 -- dashboard stuff
 vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#5eead4" }) -- logo
-vim.api.nvim_set_hl(0, "DashboardIcon", { fg = "#8b5cf6" }) -- icon
-vim.api.nvim_set_hl(0, "DashboardDesc", { fg = "#c084fc" }) -- description
-vim.api.nvim_set_hl(0, "DashboardKey", { fg = "#f0abfc" }) -- key
+vim.api.nvim_set_hl(0, "DashboardIcon", { fg = "#8b5cf6" })   -- icon
+vim.api.nvim_set_hl(0, "DashboardDesc", { fg = "#c084fc" })   -- description
+vim.api.nvim_set_hl(0, "DashboardKey", { fg = "#f0abfc" })    -- key
 vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#f9a8d4" }) -- bottom
 
 vim.o.laststatus = 0
@@ -51,3 +51,7 @@ vim.o.laststatus = 0
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#737373", bold = false })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#ffffff", bold = true })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#737373", bold = false })
+
+require("notify").setup({
+  background_colour = "#000000",
+})
