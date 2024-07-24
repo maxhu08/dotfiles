@@ -7,7 +7,6 @@ xset -dpms
 xrdb -merge ~/.Xresources
 
 feh --bg-scale ~/Pictures/wallpapers/walls/hiroshi-nagai-coastline.png  && \
-# dbus-run-session dwm & \
 dwm & \
 slstatus & \
 picom
