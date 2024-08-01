@@ -1,7 +1,6 @@
 # dotfiles
 
-> [!IMPORTANT]
-> If you are looking for my old dotfiles (which do not use stow), you can find them in https://github.com/maxhu08/dotfiles-old
+> [!IMPORTANT] If you are looking for my old dotfiles (which do not use stow), you can find them [here](https://github.com/maxhu08/dotfiles-old)
 
 This repo contains all my configs I use.
 
@@ -24,8 +23,7 @@ cd dotfiles
 
 After that, you just need to run the stow command to symlink the dotfiles you want
 
-> [!CAUTION]
-> I would not recommend stowing stuff like `git` because that contains my .gitconfig or `xorg` because thats specific to my monitor setup
+> [!CAUTION] I would not recommend stowing stuff like `git` because that contains my .gitconfig or `xorg` because thats specific to my monitor setup
 
 ```shell
 # you can stow multiple things in one command!
@@ -33,6 +31,8 @@ stow alacritty fish kitty nvim picom tmux vscode xorg
 ```
 
 Make sure to install the programs, stow just symlinks the configs. You still need to install the programs!
+
+> [!WARNING] This isn't a full list of all the packages. To get all the packages, check out my [rebos-config](https://github.com/maxhu08/rebos-config-arch) for arch
 
 Install on arch (with paru):
 
@@ -56,8 +56,7 @@ paru -S \
 
 That's it!
 
-> [!CAUTION]
-> If you are Ubuntu `build-essential` `fzf` `python3-all-venv` `nodejs` & `npm` must be installed before running `stow nvim` & `nvim`
+> [!CAUTION] If you are Ubuntu `build-essential` `fzf` `python3-all-venv` `nodejs` & `npm` must be installed before running `stow nvim` & `nvim`
 
 ## star-history
 
