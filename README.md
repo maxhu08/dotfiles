@@ -32,6 +32,8 @@ After that, you just need to run the stow command to symlink the dotfiles you wa
 stow alacritty fish kitty nvim picom tmux vscode xorg
 ```
 
+# install-packages
+
 Make sure to install the programs, stow just symlinks the configs. You still need to install the programs!
 
 To get all the packages, check out my [rebos-config](https://github.com/maxhu08/rebos-config-arch) for arch.
