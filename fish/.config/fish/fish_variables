@@ -10,4 +10,5 @@ SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_cursor_default:block
 SETUVAR fish_key_bindings:fish_vi_key_bindings

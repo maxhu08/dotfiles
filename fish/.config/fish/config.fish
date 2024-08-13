@@ -32,6 +32,9 @@ function fish_mode_prompt
   echo -n " "
 end
 
+# always use block caret (vimode)
+set -U fish_cursor_default block
+
 # custom prompt
 function fish_prompt
   set_color --bold 4086ef
