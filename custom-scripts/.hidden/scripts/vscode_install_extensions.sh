@@ -1,6 +1,7 @@
 set -- \
   bradlc.vscode-tailwindcss \
   esbenp.prettier-vscode \
+  jock.svg \
   murloccra4ler.leap \
   pkief.material-icon-theme \
   vscodevim.vim \
