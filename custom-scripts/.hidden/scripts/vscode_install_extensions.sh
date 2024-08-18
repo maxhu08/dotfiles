@@ -4,6 +4,7 @@ set -- \
   jock.svg \
   murloccra4ler.leap \
   pkief.material-icon-theme \
+  usernamehw.errorlens \
   vscodevim.vim \
   wix.vscode-import-cost
 
