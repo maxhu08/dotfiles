@@ -15,10 +15,10 @@
   "editor.cursorSmoothCaretAnimation": "off", // "on" | "off"
   "editor.cursorBlinking": "expand",
   "editor.wordWrapColumn": 500,
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.formatOnSave": true,
-  "window.titleBarStyle": "custom",
+  "window.titleBarStyle": "native", // hides top bar
   "window.customTitleBarVisibility": "never",
 
   // * file explorer settings *
