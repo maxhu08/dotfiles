@@ -18,8 +18,8 @@
   "editor.lineNumbers": "on",
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.formatOnSave": true,
-  "window.titleBarStyle": "native", // hides top bar
-  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "custom",
+  "window.customTitleBarVisibility": "windowed",
 
   // * file explorer settings *
   "files.exclude": {
@@ -140,5 +140,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prisma.showPrismaDataPlatformNotification": false
+  "prisma.showPrismaDataPlatformNotification": false,
+  "diffEditor.ignoreTrimWhitespace": false
 }
