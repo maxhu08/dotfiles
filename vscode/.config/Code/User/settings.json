@@ -104,6 +104,11 @@
       "before": ["<leader>", "<leader>"],
       "commands": ["workbench.action.quickOpen"]
     },
+    {
+      // toggle sidebar
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
     // leap plugin find word globally
     {
       "before": ["<leader>", "s"],
