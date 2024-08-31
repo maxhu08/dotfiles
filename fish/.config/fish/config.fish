@@ -140,4 +140,8 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 
+# fnm
+set -gx PATH $HOME/.fnm:$PATH
+eval (fnm env)
+
 zoxide init fish | source
