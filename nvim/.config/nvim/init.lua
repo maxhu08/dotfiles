@@ -50,4 +50,11 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#737373", bold = false })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#ffffff", bold = true })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#737373", bold = false })
 
+require("notify").setup({
+  background_colour = "#0a0a0a",
+  stages = "fade_in_slide_out",
+  timeout = 5000,
+  render = "compact",
+})
+
 require("oil").setup()
