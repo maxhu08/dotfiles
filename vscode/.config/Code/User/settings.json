@@ -1,5 +1,4 @@
 {
-  // * editor settings *
   "editor.fontFamily": "Jetbrains Mono",
   "editor.fontLigatures": true,
   "diffEditor.codeLens": true,
@@ -146,5 +145,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "prisma.showPrismaDataPlatformNotification": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "makefile.configureOnOpen": true,
+  "workbench.colorTheme": "Gruvbox Dark Hard"
 }
