@@ -27,7 +27,7 @@ function fish_mode_prompt
       echo -n (set_color --bold 8b5cf6)"V"
     case "*"
       echo -n (set_color --bold)"?"
-   end
+  end
 
   echo -n " "
 end
@@ -74,7 +74,8 @@ function fish_prompt
 end
 
 # set environment variables
-set -x PATH $PATH:/usr/local/bin:/opt/bin
+fish_add_path /usr/local/bin
+fish_add_path /opt/bin
 
 # set editor
 set -x EDITOR "vim"
@@ -128,20 +129,18 @@ set -g fish_pager_color_description $comment
 set -g fish_pager_color_selected_background --background=$selection
 
 # cargo
-set -gx PATH $HOME/.cargo/bin $PATH
+fish_add_path $HOME/.cargo/bin
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+fish_add_path $BUN_INSTALL/bin
 
 # pnpm
-set -gx PNPM_HOME "~/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+fish_add_path $PNPM_HOME
 
 # fnm
-set -gx PATH $HOME/.fnm:$PATH
+fish_add_path $HOME/.fnm
 eval (fnm env)
 
 zoxide init fish | source

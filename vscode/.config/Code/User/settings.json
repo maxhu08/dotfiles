@@ -147,5 +147,6 @@
   "prisma.showPrismaDataPlatformNotification": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "makefile.configureOnOpen": true,
-  "workbench.colorTheme": "Gruvbox Dark Hard"
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "Cursor Theme"
 }

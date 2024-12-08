@@ -12,3 +12,4 @@ SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_cursor_default:block
 SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_user_paths:/home/mh/\x2ebun/bin\x1e/home/mh/\x2ecargo/bin\x1e/usr/local/bin
