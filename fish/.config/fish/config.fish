@@ -1,3 +1,14 @@
+# aliases
+
+alias ls "eza --icons"
+alias treelist "tree -a -I '.git'"
+
+# prevents apps from closing when closing terminal
+# usage: stay <command>
+function stay
+  nohup $argv > /dev/null 2>&1 < /dev/null & disown
+end
+
 # custom greeting
 set KERNEL (uname -r)
 set fish_greeting (set_color --bold efcf40)">"(set_color ef9540)"<"(set_color ea3838)">" \
@@ -87,9 +98,6 @@ set QT_QPA_PLATFORM xcb
 # --bind='ctrl-j:down,ctrl-k:up,ctrl-t:toggle-all,ctrl-v:toggle-preview,ctrl-space:toggle-preview'
 # --color=fg:#ffffff,hl:#00ff00,fg+:#a5b4fc,bg+:#737373,hl+:#ffff00,info:#14b8a6,spinner:#00ffff,pointer:#f59e0b
 # "
-
-alias ls "eza --icons"
-alias treelist "tree -a -I '.git'"
 
 # TokyoNight Color Palette from https://github.com/folke/tokyonight.nvim/blob/main/extras/fish/tokyonight_storm.fish
 set -l foreground c0caf5
