@@ -3,7 +3,7 @@ window {
 }
 
 * {
-  font-family: "Fira Code";
+  font-family: "Jetbrains Mono";
   color: #fff;
 }
 
@@ -18,7 +18,10 @@ window {
   border: 0;
   border-radius: 0;
   font-size: 1rem;
-  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 #inner-box {
