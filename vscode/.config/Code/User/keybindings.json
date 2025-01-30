@@ -1,6 +1,15 @@
 // * keybinds to make vim easier *
 
 [
+  // terminal
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+;",
+    "command": "workbench.action.terminal.new"
+  }
   // move up and down in suggestions box
   {
     "key": "ctrl+n",
