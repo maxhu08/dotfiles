@@ -6,7 +6,9 @@ set -- \
   pkief.material-icon-theme \
   usernamehw.errorlens \
   vscodevim.vim \
-  wix.vscode-import-cost
+  wix.vscode-import-cost \
+  github.copilot \
+  github.copilot-chat
 
 for item in "$@"
 do
