@@ -1,5 +1,6 @@
 window {
-  background-color: #171717;
+  /* background-color: #171717; */
+  background: #0a0a0a;
 }
 
 * {
@@ -12,7 +13,8 @@ window {
 }
 
 #input {
-  background-color: #262626;
+  /* background-color: #262626; */
+  background-color: #171717;
   outline: none;
   box-shadow: none;
   border: 0;
