@@ -2,16 +2,8 @@
   "layer": "top",
   "position": "top",
   "margin-bottom": 0,
-  "modules-left": [
-    "clock",
-    "custom/separator",
-    "hyprland/workspaces",
-    "custom/separator",
-    "tray"
-  ],
-  "modules-center": [
-    "hyprland/window"
-  ],
+  "modules-left": ["clock", "custom/separator", "hyprland/workspaces", "custom/separator", "tray"],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "temperature",
     "memory",
@@ -22,10 +14,6 @@
     "custom/separator",
     "custom/powermenu"
   ],
-  "custom/separator": {
-    "exec": "echo \"|\"",
-    "format": "{}"
-  },
   "tray": {
     "icon-size": 16,
     "spacing": 8
@@ -68,7 +56,7 @@
       "18": "8",
       "19": "9",
       "110": "10"
-      
+
       // // 1-10
       // "1": "一",
       // "2": "二",
@@ -91,7 +79,7 @@
       // "18": "八",
       // "19": "九",
       // "110": "十"
-	  }
+    }
   },
   "hyprland/window": {
     "format": "{}"
@@ -106,11 +94,7 @@
     "format": "{icon} {temperatureC}°C ",
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", ""]
   },
   "memory": {
     "format": "󰫗 {}% ",
@@ -127,13 +111,7 @@
   },
   "battery": {
     "format": "{capacity}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", ""]
   },
   "custom/powermenu": {
     "format": "  ",

@@ -3,7 +3,8 @@
 }
 
 #waybar {
-  background: #171717;
+  /* background: #171717; */
+  background: #0a0a0a;
   color: #fff;
 }
 
