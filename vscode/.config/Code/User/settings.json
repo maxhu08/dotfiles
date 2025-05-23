@@ -25,6 +25,7 @@
     "**/*.meta": true
   },
   "explorer.compactFolders": false,
+  "workbench.sideBar.location": "right",
 
   // * formatter settings *
   "[javascript]": {
