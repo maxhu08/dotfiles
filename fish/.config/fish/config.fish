@@ -154,3 +154,5 @@ eval (fnm env)
 zoxide init fish | source
 # Created by `pipx` on 2025-05-16 23:01:35
 set PATH $PATH /home/mh/.local/bin
+
+fish_add_path /home/mh/.spicetify

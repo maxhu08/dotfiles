@@ -146,7 +146,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "prisma.showPrismaDataPlatformNotification": false,
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "makefile.configureOnOpen": true,
   "tabnine.experimentalAutoImports": true,
   "workbench.colorTheme": "Cursor Theme"
