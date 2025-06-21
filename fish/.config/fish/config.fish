@@ -156,3 +156,5 @@ zoxide init fish | source
 set PATH $PATH /home/mh/.local/bin
 
 fish_add_path /home/mh/.spicetify
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
