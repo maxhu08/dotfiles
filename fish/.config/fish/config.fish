@@ -147,11 +147,17 @@ fish_add_path $BUN_INSTALL/bin
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 fish_add_path $PNPM_HOME
 
-# fnm
-fish_add_path $HOME/.fnm
-eval (fnm env)
+# fnm (only if installed)
+if type -q fnm
+  fish_add_path $HOME/.fnm
+  eval (fnm env)
+end
 
-zoxide init fish | source
+# zoxide (only if installed)
+if type -q zoxide
+  zoxide init fish | source
+end
+
 # Created by `pipx` on 2025-05-16 23:01:35
 set PATH $PATH /home/mh/.local/bin
 
