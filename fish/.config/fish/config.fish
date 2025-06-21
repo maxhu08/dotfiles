@@ -147,14 +147,18 @@ fish_add_path $BUN_INSTALL/bin
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 fish_add_path $PNPM_HOME
 
-# fnm (only if installed)
-if type -q fnm
+# fnm setup (homebrew or default)
+if test -x /opt/homebrew/bin/fnm
+  fish_add_path /opt/homebrew/bin
+  eval (/opt/homebrew/bin/fnm env)
+else if test -x $HOME/.fnm/fnm
   fish_add_path $HOME/.fnm
   eval (fnm env)
 end
 
-# zoxide (only if installed)
-if type -q zoxide
+# zoxide setup (homebrew)
+if test -x /opt/homebrew/bin/zoxide
+  fish_add_path /opt/homebrew/bin
   zoxide init fish | source
 end
 
