@@ -168,3 +168,8 @@ set PATH $PATH /home/mh/.local/bin
 fish_add_path /home/mh/.spicetify
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/mh/.lmstudio/bin
+# End of LM Studio CLI section
+
