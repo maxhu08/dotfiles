@@ -148,28 +148,39 @@ set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 fish_add_path $PNPM_HOME
 
 # fnm setup (homebrew or default)
-if test -x /opt/homebrew/bin/fnm
-  fish_add_path /opt/homebrew/bin
-  eval (/opt/homebrew/bin/fnm env)
-else if test -x $HOME/.fnm/fnm
-  fish_add_path $HOME/.fnm
-  eval (fnm env)
+if test (uname) = "Darwin"
+  # macOS paths
+  if test -x /opt/homebrew/bin/fnm
+    fish_add_path /opt/homebrew/bin
+    eval (/opt/homebrew/bin/fnm env)
+  else if test -x $HOME/.fnm/fnm
+    fish_add_path $HOME/.fnm
+    eval (fnm env)
+  end
+
+  # zoxide setup (homebrew)
+  if test -x /opt/homebrew/bin/zoxide
+    fish_add_path /opt/homebrew/bin
+    zoxide init fish | source
+  end
+
+  # homebrew shell environment (macOS only)
+  if test -x /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv)
+  end
+
+  # LM Studio CLI (macOS)
+  set -gx PATH $PATH /Users/mh/.lmstudio/bin
+else
+  # linux or other platforms
+  if test -x $HOME/.fnm/fnm
+    fish_add_path $HOME/.fnm
+    eval (fnm env)
+  end
+
+  # zoxide
+  if test -x (which zoxide 2>/dev/null)
+    zoxide init fish | source
+  end
 end
-
-# zoxide setup (homebrew)
-if test -x /opt/homebrew/bin/zoxide
-  fish_add_path /opt/homebrew/bin
-  zoxide init fish | source
-end
-
-# Created by `pipx` on 2025-05-16 23:01:35
-set PATH $PATH /home/mh/.local/bin
-
-fish_add_path /home/mh/.spicetify
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/mh/.lmstudio/bin
-# End of LM Studio CLI section
 
