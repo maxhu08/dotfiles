@@ -134,13 +134,11 @@
   "window.zoomLevel": 2,
   "cmake.configureOnOpen": false,
   "cmake.showOptionsMovedNotification": false,
-  "workbench.iconTheme": "material-icon-theme",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "explorer.confirmDragAndDrop": false,
   "git.ignoreRebaseWarning": true,
-  "workbench.statusBar.visible": false,
   "explorer.confirmDelete": false,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -149,5 +147,6 @@
   "diffEditor.ignoreTrimWhitespace": true,
   "makefile.configureOnOpen": true,
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Cursor Theme"
+  "workbench.colorTheme": "Cursor Theme",
+  "workbench.statusBar.visible": false
 }
