@@ -1,15 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3800
-SETUVAR fish_color_cancel:\x2dr
-SETUVAR fish_color_cwd:green
-SETUVAR fish_color_cwd_root:red
-SETUVAR fish_color_history_current:\x2d\x2dbold
-SETUVAR fish_color_host:normal
-SETUVAR fish_color_host_remote:yellow
-SETUVAR fish_color_status:red
-SETUVAR fish_color_user:brgreen
-SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR __fish_initialized:4300
 SETUVAR fish_cursor_default:block
-SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_user_paths:/Users/mh/bin\x1e/Users/mh/\x2ebun/bin\x1e/opt/homebrew/bin\x1e/home/mh/\x2espicetify\x1e/home/mh/\x2elocal/share/pnpm\x1e/home/mh/\x2ebun/bin\x1e/home/mh/\x2ecargo/bin\x1e/usr/local/bin
