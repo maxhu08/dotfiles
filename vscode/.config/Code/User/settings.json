@@ -149,5 +149,6 @@
   "tabnine.experimentalAutoImports": true,
   "workbench.colorTheme": "Cursor Theme",
   "workbench.statusBar.visible": false,
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.secondarySideBar.defaultVisibility": "visible"
 }
