@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "margin-bottom": 0,
   "modules-left": ["clock", "hyprland/workspaces", "tray"],
   "modules-center": ["hyprland/window"],
