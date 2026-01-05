@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "margin-bottom": 0,
-  "modules-left": ["clock", "custom/separator", "hyprland/workspaces", "custom/separator", "tray"],
+  "modules-left": ["clock", "hyprland/workspaces", "tray"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "temperature",
@@ -10,8 +10,8 @@
     "cpu",
     "pulseaudio",
     "battery",
+    "custom/nightmode",
     "network",
-    "custom/separator",
     "custom/powermenu"
   ],
   "tray": {
@@ -84,12 +84,6 @@
   "hyprland/window": {
     "format": "{}"
   },
-  "network": {
-    "format": " 󰖩",
-    // "tooltip": "{ifname}",
-    "tooltip-format": "{essid}",
-    "interval": 2
-  },
   "temperature": {
     "format": "{icon} {temperatureC}°C ",
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -105,16 +99,28 @@
     "tooltip": "false"
   },
   "pulseaudio": {
-    "format": " {volume}%",
+    "format": " {volume}% ",
     "scroll-step": 1,
     "on-click": "pavucontrol"
+  },
+  "custom/nightmode": {
+    "exec": "bash -lc '~/.config/waybar/wlsunset.sh status'",
+    "interval": 2,
+    "tooltip": false,
+    "on-click": "bash -lc '~/.config/waybar/wlsunset.sh toggle'"
+  },
+  "network": {
+    "format": "󰖩 ",
+    // "tooltip": "{ifname}",
+    "tooltip-format": "{essid}",
+    "interval": 2
   },
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""]
   },
   "custom/powermenu": {
-    "format": "  ",
+    "format": " ",
     "tooltip": false,
     "on-click": "exec wlogout -p layer-shell"
   }
