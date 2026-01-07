@@ -52,24 +52,29 @@ toggle() {
 }
 
 status() {
+  local icon tooltip cur
+
+  icon="󰖨 "
+  tooltip="Night Mode Off"
+
   if ! have hyprctl; then
-    echo "󰖨 "
+    printf '{"text":"%s","tooltip":"%s"}\n' "$icon" "$tooltip"
     exit 0
   fi
 
   if ! pgrep -x hyprsunset >/dev/null 2>&1; then
-    echo "󰖨 "
+    printf '{"text":"%s","tooltip":"%s"}\n' "$icon" "$tooltip"
     exit 0
   fi
 
-  local cur
   cur="$(get_temp)"
 
   if [[ "$cur" -le $((DAY_TEMP - 1)) ]]; then
-    echo " "
-  else
-    echo "󰖨 "
+    icon=" "
+    tooltip="Night Mode On"
   fi
+
+  printf '{"text":"%s","tooltip":"%s"}\n' "$icon" "$tooltip"
 }
 
 case "${1:-status}" in

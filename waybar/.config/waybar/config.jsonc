@@ -11,6 +11,7 @@
     "pulseaudio",
     "battery",
     "custom/nightmode",
+    "custom/bluetooth",
     "network",
     "custom/powermenu"
   ],
@@ -105,9 +106,18 @@
   },
   "custom/nightmode": {
     "exec": "bash -lc '~/.config/waybar/hyprsunset.sh status'",
+    "return-type": "json",
     "interval": 2,
-    "tooltip": false,
+    "tooltip": true,
     "on-click": "bash -lc '~/.config/waybar/hyprsunset.sh toggle'"
+  },
+  "custom/bluetooth": {
+    "exec": "echo \"󰂯\"",
+    "interval": 0,
+    "tooltip": true,
+    "tooltip-format": "Bluetooth",
+    "on-click": "blueman-manager",
+    "on-click-right": "blueman-adapters"
   },
   "network": {
     "format": "󰖩 ",

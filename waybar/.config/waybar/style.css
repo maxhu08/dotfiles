@@ -8,16 +8,10 @@
   color: #fff;
 }
 
+/* LEFT MODULES */
+
 #clock {
   color: #fff;
-}
-
-#tray {
-  padding-left: 4px;
-}
-
-#workspaces button:hover {
-  background-color: transparent;
 }
 
 #workspaces button {
@@ -35,24 +29,17 @@
   color: #84cc16;
 }
 
+#tray {
+  padding-left: 4px;
+}
+
+/* CENTER MODULE */
+
 #window {
   color: #fff;
 }
 
-#network {
-  color: #3b82f6;
-  margin-right: 8px;
-}
-
-#pulseaudio {
-  color: #14b8a6;
-  margin-right: 4px;
-}
-
-#cpu {
-  color: #0ea5e9;
-  margin-right: 4px;
-}
+/* RIGHT MODULES */
 
 #temperature {
   color: #eab308;
@@ -64,11 +51,35 @@
   margin-right: 4px;
 }
 
-#custom-powermenu {
-  color: #f43f5e;
+#cpu {
+  color: #0ea5e9;
+  margin-right: 4px;
+}
+
+#pulseaudio {
+  color: #14b8a6;
+  margin-right: 4px;
+}
+
+#battery {
+  margin-right: 4px;
 }
 
 #custom-nightmode {
   color: #f97316;
   margin-right: 8px;
+}
+
+#custom-bluetooth {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+#network {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+#custom-powermenu {
+  color: #f43f5e;
 }
