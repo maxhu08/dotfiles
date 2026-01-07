@@ -104,10 +104,10 @@
     "on-click": "pavucontrol"
   },
   "custom/nightmode": {
-    "exec": "bash -lc '~/.config/waybar/wlsunset.sh status'",
+    "exec": "bash -lc '~/.config/waybar/hyprsunset.sh status'",
     "interval": 2,
     "tooltip": false,
-    "on-click": "bash -lc '~/.config/waybar/wlsunset.sh toggle'"
+    "on-click": "bash -lc '~/.config/waybar/hyprsunset.sh toggle'"
   },
   "network": {
     "format": "󰖩 ",
