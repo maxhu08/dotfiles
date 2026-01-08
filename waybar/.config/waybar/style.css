@@ -41,6 +41,10 @@
 
 /* RIGHT MODULES */
 
+#custom-updates {
+  color: #84cc16;
+}
+
 #temperature {
   color: #eab308;
   margin-right: 4px;

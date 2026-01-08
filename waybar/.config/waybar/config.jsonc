@@ -5,6 +5,7 @@
   "modules-left": ["clock", "hyprland/workspaces", "tray"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
+    "custom/updates",
     "temperature",
     "memory",
     "cpu",
@@ -85,6 +86,13 @@
   "hyprland/window": {
     "format": "{}"
   },
+  "custom/updates": {
+    "exec": "bash -lc 'r=$(checkupdates 2>/dev/null | wc -l); a=$(paru -Qua 2>/dev/null | wc -l); [ $((r+a)) -gt 0 ] && printf \"󰏗   \" || printf \"󰏗   \"'",
+    "interval": 600,
+    "tooltip": true,
+    "tooltip-format": "Left click: update (paru -Syyu --noconfirm)",
+    "on-click": "kitty -e bash -lc 'paru -Syyu --noconfirm'"
+  },
   "temperature": {
     "format": "{icon} {temperatureC}°C ",
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -112,7 +120,7 @@
     "on-click": "bash -lc '~/.config/waybar/hyprsunset.sh toggle'"
   },
   "custom/bluetooth": {
-    "exec": "echo \"󰂯\"",
+    "exec": "echo \"󰂯 \"",
     "interval": 0,
     "tooltip": true,
     "tooltip-format": "Bluetooth",
