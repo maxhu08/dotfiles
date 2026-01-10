@@ -18,7 +18,6 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.formatOnSave": true,
   "window.titleBarStyle": "custom",
-  "window.menuBarVisibility": "toggle",
 
   // * file explorer settings *
   "files.exclude": {

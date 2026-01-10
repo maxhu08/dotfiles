@@ -129,9 +129,9 @@
   },
   "network": {
     "format": "󰖩 ",
-    // "tooltip": "{ifname}",
     "tooltip-format": "{essid}",
-    "interval": 2
+    "interval": 2,
+    "on-click": "kitty -e nmtui"
   },
   "battery": {
     "format": "{capacity}% {icon}",
