@@ -113,11 +113,11 @@
     "on-click": "pavucontrol"
   },
   "custom/nightmode": {
-    "exec": "bash -lc '~/.config/waybar/hyprsunset.sh status'",
+    "exec": "bash -lc '~/.config/waybar/scripts/hyprsunset.sh status'",
     "return-type": "json",
     "interval": 2,
     "tooltip": true,
-    "on-click": "bash -lc '~/.config/waybar/hyprsunset.sh toggle'"
+    "on-click": "bash -lc '~/.config/waybar/scripts/hyprsunset.sh toggle'"
   },
   "custom/bluetooth": {
     "exec": "echo \"󰂯 \"",
