@@ -1,0 +1,36 @@
+# window-decoration = none
+window-decoration = auto
+background-opacity = 1
+window-padding-x = 4
+window-padding-y = 4
+
+font-family = "JetBrainsMono Nerd Font Mono"
+font-family = "JetBrains Mono NerdFont"
+font-size = 18
+
+foreground = #cdd6f4
+background = #0a0a0a
+
+selection-foreground = #1e1e2e
+selection-background = #f5e0dc
+
+cursor-color = #f5e0dc
+cursor-text = #1e1e2e
+
+palette = 0=#45475a
+palette = 1=#ef688e
+palette = 2=#8ada83
+palette = 3=#f6d488
+palette = 4=#649cf8
+palette = 5=#ef9cd8
+palette = 6=#57c1ff
+palette = 7=#e4e4e7
+palette = 8=#585b70
+palette = 9=#f38ba8
+palette = 10=#a6e3a1
+palette = 11=#f9e2af
+palette = 12=#89b4fa
+palette = 13=#f5c2e7
+palette = 14=#7dcfff
+palette = 15=#f4f4f5
+p
