@@ -4,4 +4,4 @@
 [credential]
 	# use GitHub CLI for Git credentials; prefer Homebrew paths on macOS,
 	# otherwise use /usr/bin/gh or gh from PATH.
-	helper = !f() { if [ "$(uname -s)" = "Darwin" ]; then if [ -x /opt/homebrew/bin/gh ]; then /opt/homebrew/bin/gh auth git-credential "$@"; elif [ -x /usr/local/bin/gh ]; then /usr/local/bin/gh auth git-credential "$@"; else gh auth git-credential "$@"; fi; else if [ -x /usr/bin/gh ]; then /usr/bin/gh auth git-credential "$@"; else gh auth git-credential "$@"; fi; fi; }; f
+	helper = "!case \"$(uname -s)\" in Darwin) gh_bin=/opt/homebrew/bin/gh; [ -x \"$gh_bin\" ] || gh_bin=/usr/local/bin/gh ;; *) gh_bin=/usr/bin/gh ;; esac; [ -x \"$gh_bin\" ] || gh_bin=gh; \"$gh_bin\" auth git-credential \"$@\""
