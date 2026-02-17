@@ -9,7 +9,12 @@
   {
     "key": "ctrl+shift+;",
     "command": "workbench.action.terminal.new"
-  }
+  },
+  // open command palette
+  {
+    "key": "ctrl+space",
+    "command": "workbench.action.showCommands"
+  },
   // move up and down in suggestions box
   {
     "key": "ctrl+n",
