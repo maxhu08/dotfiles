@@ -1,4 +1,5 @@
 set -- \
+  maxhu.modern-tweaked \
   adpyke.codesnap \
   bradlc.vscode-tailwindcss \
   davidanson.vscode-markdownlint \
