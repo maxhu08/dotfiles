@@ -2,10 +2,6 @@
 	email = "contact@maxhu.dev"
 	name = "maxhu08"
 [credential]
-	helper = /opt/homebrew/bin/gh auth git-credential
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+	# use GitHub CLI for Git credentials; prefer Homebrew paths on macOS,
+	# otherwise use /usr/bin/gh or gh from PATH.
+	helper = !f() { if [ "$(uname -s)" = "Darwin" ]; then if [ -x /opt/homebrew/bin/gh ]; then /opt/homebrew/bin/gh auth git-credential "$@"; elif [ -x /usr/local/bin/gh ]; then /usr/local/bin/gh auth git-credential "$@"; else gh auth git-credential "$@"; fi; else if [ -x /usr/bin/gh ]; then /usr/bin/gh auth git-credential "$@"; else gh auth git-credential "$@"; fi; fi; }; f
