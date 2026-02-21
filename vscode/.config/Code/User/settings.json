@@ -54,7 +54,7 @@
   "files.exclude": {
     "**/*.meta": true
   },
-  "workbench.colorTheme": "Dark Modern Tweaked",
+  "workbench.colorTheme": "Darker Modern Tweaked",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
   "workbench.secondarySideBar.defaultVisibility": "visible",
