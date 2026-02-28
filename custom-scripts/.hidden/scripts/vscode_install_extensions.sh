@@ -1,5 +1,6 @@
 set -- \
   maxhu.modern-tweaked \
+  hoolby.vscode-tree-file-size \
   adpyke.codesnap \
   bradlc.vscode-tailwindcss \
   davidanson.vscode-markdownlint \
