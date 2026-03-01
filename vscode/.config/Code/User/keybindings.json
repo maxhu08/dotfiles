@@ -18,7 +18,7 @@
   // open command palette
   {
     "key": "ctrl+space",
-    "command": "workbench.action.showCommands"
+    "command": "workbench.action.quickOpen"
   },
   // move up and down in suggestions box
   {
