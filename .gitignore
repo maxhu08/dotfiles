@@ -5,3 +5,6 @@ vscode/*
 !vscode/.config/Code/User/settings.json
 !vscode/.config/Code/User/keybindings.json
 
+# zsh completion cache
+zsh/.zcompdump
+zsh/.zcompdump*
