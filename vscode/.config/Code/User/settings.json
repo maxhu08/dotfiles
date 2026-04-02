@@ -54,7 +54,6 @@
   "files.exclude": {
     "**/*.meta": true
   },
-  "workbench.colorTheme": "Darker Modern Tweaked",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
   "workbench.secondarySideBar.defaultVisibility": "visible",
@@ -150,5 +149,6 @@
   "tabnine.experimentalAutoImports": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "vscode_vibrancy.opacity": 0.1,
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "workbench.colorTheme": "Darker Modern Tweaked"
 }
