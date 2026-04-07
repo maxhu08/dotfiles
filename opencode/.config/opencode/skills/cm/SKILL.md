@@ -5,17 +5,23 @@ description: Generate a concise commit message when the user says cm
 
 When the user message is exactly "cm", output a commit message.
 
-- Include relevant code/config changes since the last "cm", or from the start if none
+Before writing the message:
+
+- Check whether the repo has a commit convention configured, such as a `commitlint` config or similar commit-message rule/config
+- If a convention is configured, follow it
+- If no convention is configured, inspect recent git history for this repo and infer the commit style from there
+- Base the message on relevant code/config changes since the last `cm`, or from the start if none
 - Ignore unrelated conversation or questions
-- Follow the repository's commit conventions
-- If unclear, infer style from recent git history
 
 Formatting:
 
 - Single line only
 - Do not exceed 100 characters
-- No body, no bullet points, no extra lines
-- No quotes or code blocks
+- No body
+- No bullet points
+- No extra lines
+- No quotes
+- No code blocks
 
 Style:
 
