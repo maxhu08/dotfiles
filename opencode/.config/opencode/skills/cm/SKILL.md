@@ -22,6 +22,7 @@ Formatting:
 - No extra lines
 - No quotes
 - No code blocks
+- If the commit references an issue, append a space followed by (#<ISSUE_NUMBER>) on the same line.
 
 Style:
 
@@ -32,8 +33,8 @@ Style:
 
 Output:
 
-- First line: the commit message only
+First line: the commit message only. If an issue is referenced, include (#<ISSUE_NUMBER>) at the end while remaining under the 100-character limit.
 
-Then on a new line: If this commit should reference an issue, provide the number and (#N) will be appended while staying under 100 characters.
+Then on a new line: If this commit should reference an issue, provide the issue number.
 
 On the following line: If revisions are required, specify the changes and the message will be regenerated.
