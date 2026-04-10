@@ -4,36 +4,31 @@ description: Generate a concise commit message
 
 Generate a commit message for the current repo changes.
 
-Before writing the message:
+Work quickly. Use the smallest amount of inspection needed.
 
-- Check whether the repo has a commit convention configured, such as a `commitlint` config or similar commit-message rule/config
-- If a convention is configured, follow it
-- If no convention is configured, inspect recent git history for this repo and infer the commit style from there
-- Base the message on relevant code/config changes since the last `cm`, or from the start if none
-- Ignore unrelated conversation or questions
+1. Check for a commit-message convention such as `commitlint` or similar config.
+2. If one exists, follow it.
+3. Otherwise, infer the style from recent commits.
+4. Base the message on relevant changes since the last `cm`, or from the start if none.
+5. Ignore unrelated conversation.
 
-Formatting:
+Rules:
 
 - Single line only
-- Do not exceed 100 characters
-- No body
-- No bullet points
-- No extra lines
-- No quotes
-- No code blocks
-- If the commit references an issue, append a space followed by `(#<ISSUE_NUMBER>)` on the same line
-
-Style:
-
+- Maximum 100 characters
+- No body, bullets, quotes, or code fences
 - Use imperative mood
 - Keep wording minimal and precise
 - Use type/scope only if the repo uses them
 - No trailing punctuation
+- If the commit references an issue, append ` (#<ISSUE_NUMBER>)`
 
 Output:
 
-First line: the commit message only. If an issue is referenced, include `(#<ISSUE_NUMBER>)` at the end while remaining under the 100-character limit.
+- First line: only the commit message
+- If no follow-up is needed, stop after the first line
+- If an issue number is needed or the request needs revision, add exactly one second line with this exact text:
 
-Then on a new line: if this commit should reference an issue, provide the issue number.
+`If this should reference an issue or you'd like revisions, send the issue number or the changes to make and I'll regenerate it.`
 
-On the following line: if revisions are required, specify the changes and the message will be regenerated.
+If the user provides an issue number or revision instructions, regenerate the message using that information.
