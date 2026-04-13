@@ -1,16 +1,37 @@
 ---
-description: Generate a concise commit message
+description: Generate commit message; args: [issue-number] [git]
 ---
 
 Generate a commit message for the current repo changes.
 
 Work quickly. Use the smallest amount of inspection needed.
 
+Arguments: `$ARGUMENTS`
+
+Argument handling:
+
+- Default to using only this conversation to understand the requested changes.
+- Do not inspect git history or diffs unless the arguments explicitly ask for git mode.
+- If the arguments include an issue number, append ` (#<ISSUE_NUMBER>)`.
+- If the arguments include git mode, inspect `git diff` and summarize all current changes instead of using only this conversation.
+- If no issue number is provided, do not append one.
+
+Accepted argument forms:
+
+- No arguments: conversation-only mode, no issue number.
+- `<issue-number>`: conversation-only mode, append ` (#<issue-number>)`.
+- `git`: git mode, no issue number.
+- `<issue-number> git`: git mode, append ` (#<issue-number>)`.
+- Reject any other argument format.
+
+Process:
+
 1. Check for a commit-message convention such as `commitlint` or similar config.
 2. If one exists, follow it.
 3. Otherwise, infer the style from recent commits.
-4. Base the message on relevant changes since the last `cm`, or from the start if none.
-5. Ignore unrelated conversation.
+4. In conversation-only mode, base the message only on the relevant requested changes in this conversation.
+5. In git mode, base the message on the current repo diff.
+6. Ignore unrelated conversation.
 
 Rules:
 
@@ -25,10 +46,4 @@ Rules:
 
 Output:
 
-- First line: only the commit message
-- If no follow-up is needed, stop after the first line
-- If an issue number is needed or the request needs revision, add exactly one second line with this exact text:
-
-`If this should reference an issue or you'd like revisions, send the issue number or the changes to make and I'll regenerate it.`
-
-If the user provides an issue number or revision instructions, regenerate the message using that information.
+- Output only the commit message
