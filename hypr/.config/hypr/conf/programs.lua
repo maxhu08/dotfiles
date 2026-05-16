@@ -1,0 +1,5 @@
+-- Set programs that you use
+
+terminal = "ghostty"
+fileManager = "nemo"
+menu = "wofi --show drun"
