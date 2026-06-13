@@ -27,7 +27,7 @@
     "format": " 󰸗 {:%I:%M %p} ",
     "interval": 60,
     "tooltip": true,
-    "tooltip-format": "{:%d %B %H:%M}"
+    "tooltip-format": "{:%A, %d %B}"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
