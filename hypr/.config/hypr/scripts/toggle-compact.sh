@@ -19,14 +19,8 @@ CURRENT_BORDER="${CURRENT_BORDER:-$NORMAL_BORDER}"
 
 if [ "$CURRENT_BORDER" = "0" ]; then
   # restore normal
-  hyprctl keyword general:border_size "$NORMAL_BORDER"
-  hyprctl keyword general:gaps_in "$NORMAL_GAPS_IN"
-  hyprctl keyword general:gaps_out "$NORMAL_GAPS_OUT"
-  hyprctl keyword decoration:rounding "$NORMAL_ROUNDING"
+  hyprctl --quiet eval "hl.config({ general = { border_size = $NORMAL_BORDER, gaps_in = $NORMAL_GAPS_IN, gaps_out = $NORMAL_GAPS_OUT }, decoration = { rounding = $NORMAL_ROUNDING } })"
 else
   # compact
-  hyprctl keyword general:border_size 0
-  hyprctl keyword general:gaps_in 0
-  hyprctl keyword general:gaps_out 0
-  hyprctl keyword decoration:rounding 0
+  hyprctl --quiet eval "hl.config({ general = { border_size = 0, gaps_in = 0, gaps_out = 0 }, decoration = { rounding = 0 } })"
 fi
