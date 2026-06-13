@@ -8,6 +8,17 @@
   color: #fff;
 }
 
+tooltip {
+  background: #171717;
+  border: 1px solid #404040;
+  border-radius: 6px;
+}
+
+tooltip label {
+  color: #fff;
+  padding: 4px 8px;
+}
+
 /* LEFT MODULES */
 
 #clock {

@@ -90,11 +90,13 @@
   },
   "memory": {
     "format": "󰫗 {}% ",
-    "tooltip": "false"
+    "tooltip": true,
+    "tooltip-format": "Memory: {}%"
   },
   "cpu": {
     "format": " {usage}% ",
-    "tooltip": "false"
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%"
   },
   "pulseaudio": {
     "format": " {volume}% ",
@@ -109,8 +111,7 @@
     "on-click": "bash -lc '~/.config/waybar/scripts/hyprsunset.sh toggle'"
   },
   "custom/bluetooth": {
-    "exec": "echo \"󰂯 \"",
-    "interval": 0,
+    "format": "󰂯 ",
     "tooltip": true,
     "tooltip-format": "Bluetooth",
     "on-click": "blueman-manager",
@@ -128,7 +129,8 @@
   },
   "custom/powermenu": {
     "format": " ",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Power menu",
     "on-click": "exec wlogout -p layer-shell"
   }
 }
