@@ -41,6 +41,7 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd([[bash -c 'grim -g "$(slurp)"
 
 -- toggle no border, no gaps, no border radius
 hl.bind(mainMod .. " + SHIFT + CTRL + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-compact.sh"))
+hl.bind(mainMod .. " + SHIFT + CTRL + A", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-animations.sh"))
 
 -- Example special workspace (scratchpad) COMMENTED OUT FOR SCREENSHOT KEYBIND
 -- hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
