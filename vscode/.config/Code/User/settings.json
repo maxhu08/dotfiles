@@ -137,7 +137,6 @@
   "git.ignoreRebaseWarning": true,
   "go.toolsManagement.autoUpdate": true,
   "html.format.contentUnformatted": "",
-  "javascript.updateImportsOnFileMove.enabled": "never",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "makefile.configureOnOpen": true,
@@ -147,8 +146,8 @@
   "settingsSync.ignoredSettings": [],
   "svg.preview.mode": "img",
   "tabnine.experimentalAutoImports": true,
-  "typescript.preferences.importModuleSpecifier": "non-relative",
   "vscode_vibrancy.opacity": 0.1,
   "window.zoomLevel": 2,
+  "latex-workshop.latex.autoBuild.run": "onSave",
   "workbench.colorTheme": "Darker Modern Tweaked"
 }
