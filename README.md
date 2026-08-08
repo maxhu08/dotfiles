@@ -27,7 +27,7 @@ After that, you just need to run the stow command to symlink the dotfiles you wa
 
 ```shell
 # you can stow multiple things in one command!
-stow alacritty fish kitty nvim picom tmux vscode xorg
+stow alacritty fish kitty nvim picom tmux vscode xorg zed
 ```
 
 ## install-packages

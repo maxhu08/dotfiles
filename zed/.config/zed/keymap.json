@@ -1,0 +1,20 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "k j": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-g": "git_panel::Toggle",
+      "cmd-e": "project_panel::Toggle",
+    },
+  },
+]

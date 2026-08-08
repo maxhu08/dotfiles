@@ -184,3 +184,6 @@ else
   end
 end
 
+
+# uv
+fish_add_path "/Users/mh/.local/bin"

@@ -2,4 +2,4 @@
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
 SETUVAR fish_cursor_default:block
-SETUVAR fish_user_paths:/Users/mh/bin\x1e/Users/mh/\x2ebun/bin\x1e/opt/homebrew/bin\x1e/home/mh/\x2espicetify\x1e/home/mh/\x2elocal/share/pnpm\x1e/home/mh/\x2ebun/bin\x1e/home/mh/\x2ecargo/bin\x1e/usr/local/bin
+SETUVAR fish_user_paths:/Users/mh/\x2elocal/share/pnpm\x1e/Users/mh/\x2ecargo/bin\x1e/Users/mh/\x2elocal/bin\x1e/Users/mh/bin\x1e/Users/mh/\x2ebun/bin\x1e/opt/homebrew/bin\x1e/home/mh/\x2espicetify\x1e/home/mh/\x2elocal/share/pnpm\x1e/home/mh/\x2ebun/bin\x1e/home/mh/\x2ecargo/bin\x1e/usr/local/bin

@@ -1,0 +1,92 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "new_window",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "tabs": {
+    "file_icons": true,
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "agent": {
+    "default_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-sol",
+      "enable_thinking": true,
+      "effort": "medium",
+    },
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "sandbox_permissions": {
+      "allow_unsandboxed": true,
+      "write_paths": [
+        {
+          "requested": "/Users/mh/.config/zed",
+          "resolved": "/Users/mh/.config/zed",
+        },
+      ],
+      "network_hosts": ["zed.dev", "api.github.com", "raw.githubusercontent.com", "codeload.github.com", "github.com"],
+    },
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "vim_mode": true,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
+  },
+  "terminal": {
+    "font_family": "Jetbrains Mono",
+    "font_fallbacks": ["DejaVu Math TeX Gyre"],
+  },
+  "project_panel": {
+    "dock": "right",
+    "auto_fold_dirs": false,
+  },
+  "status_bar": {
+    "experimental.show": false,
+  },
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "gutter": {
+    "line_numbers": true,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "cursor_shape": "bar",
+  "cursor_blink": true,
+  "buffer_font_family": "Jetbrains Mono",
+  "format_on_save": "on",
+  "preferred_line_length": 500,
+  "tab_size": 2,
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "VSCode Light Modern Tweaked",
+    "dark": "VSCode Darker Modern Tweaked",
+  },
+}
