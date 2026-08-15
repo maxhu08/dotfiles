@@ -42,4 +42,4 @@ My wallapers are not in this repo. To access all my of wallpapers, check out my 
 
 ## star-history
 
-[![Star History Chart](https://api.star-history.com/svg?repos=maxhu08/dotfiles&type=Date)](https://star-history.com/#maxhu08/dotfiles&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=maxhu08/dotfiles&type=Date)](https://star-history.dera.page/#maxhu08/dotfiles&Date)
