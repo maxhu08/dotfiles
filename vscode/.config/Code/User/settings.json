@@ -92,16 +92,22 @@
       "after": ["<Esc>"]
     },
     {
-      "before": ["w", "e", "r"],
-      "after": ["\\"]
-    },
-    {
       // search files
       "before": ["<C-p>"],
       "commands": ["workbench.action.quickOpen"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      // wrapped line fix
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      // wrapped line fix
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
     {
       // vim move lines
       "before": ["J"],
