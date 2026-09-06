@@ -36,6 +36,14 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[latex]": {
+    "editor.inlineSuggest.enabled": false,
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 100
+  },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma",
     "editor.formatOnSave": true
@@ -143,15 +151,15 @@
   "html.format.contentUnformatted": "",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
-  "makefile.configureOnOpen": true,
-  "npm.keybindingsChangedWarningShown": true,
-  "prisma.showPrismaDataPlatformNotification": false,
   "redhat.telemetry.enabled": false,
   "settingsSync.ignoredSettings": [],
   "svg.preview.mode": "img",
-  "tabnine.experimentalAutoImports": true,
-  "vscode_vibrancy.opacity": 0.1,
   "window.zoomLevel": 2,
   "latex-workshop.latex.autoBuild.run": "onSave",
-  "workbench.colorTheme": "Darker Modern Tweaked"
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.formatting.tex-fmt.path": "/opt/homebrew/bin/tex-fmt",
+  "latex-workshop.formatting.tex-fmt.args": ["--wraplen", "100", "--tabsize", "2"],
+  "workbench.colorTheme": "Darker Modern Tweaked",
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "window.restoreWindows": "none"
 }

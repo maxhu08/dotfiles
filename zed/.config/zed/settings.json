@@ -50,6 +50,9 @@
     "dock": "right",
   },
   "vim_mode": true,
+  "edit_predictions": {
+    "provider": "none",
+  },
   "agent_servers": {
     "codex-acp": {
       "type": "registry",
