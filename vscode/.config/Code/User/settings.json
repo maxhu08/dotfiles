@@ -124,27 +124,6 @@
       "after": ["g", "$"]
     },
     {
-      // wrapped line fix
-      "before": ["A"],
-      "commands": [
-        {
-          "command": "cursorMove",
-          "args": {
-            "to": "wrappedLineEnd"
-          }
-        },
-        {
-          "command": "cursorMove",
-          "args": {
-            "to": "left",
-            "by": "character",
-            "value": 1
-          }
-        },
-        "extension.vim_insert"
-      ]
-    },
-    {
       // vim move lines
       "before": ["J"],
       "commands": ["editor.action.moveLinesDownAction"]
