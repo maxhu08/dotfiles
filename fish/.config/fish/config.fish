@@ -9,11 +9,31 @@ function stay
   nohup $argv > /dev/null 2>&1 < /dev/null & disown
 end
 
-# custom greeting
+# Base startup greeting: the orange fish, Fish version, and kernel version.
 set KERNEL (uname -r)
 set fish_greeting (set_color --bold efcf40)">"(set_color ef9540)"<"(set_color ea3838)">" \
   (set_color normal)"fish $FISH_VERSION" \
   (set_color normal)"| $KERNEL"
+
+# Custom Github scripts 
+if test -f "$HOME/Documents/Scripts/ghstat.sh"
+  alias ghstat '"$HOME/Documents/Scripts/ghstat.sh"'
+end
+
+if test -f "$HOME/Documents/Scripts/ghswitch.sh"
+  alias ghswitch '"$HOME/Documents/Scripts/ghswitch.sh"'
+end
+
+if test -f "$HOME/Documents/Scripts/ghwelc.sh"
+  alias ghwelc '"$HOME/Documents/Scripts/ghwelc.sh"'
+end
+
+function fish_greeting
+  echo $fish_greeting
+  if test -f "$HOME/Documents/Scripts/ghwelc.sh"
+    /bin/sh "$HOME/Documents/Scripts/ghwelc.sh"
+  end
+end
 
 function fish_user_key_bindings
   fish_vi_key_bindings

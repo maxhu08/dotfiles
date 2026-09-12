@@ -1,6 +1,3 @@
-[user]
-	email = "contact@maxhu.dev"
-	name = "maxhu08"
 [credential]
 	# use GitHub CLI for Git credentials; prefer Homebrew paths on macOS,
 	# otherwise use /usr/bin/gh or gh from PATH.

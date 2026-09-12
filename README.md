@@ -23,7 +23,10 @@ cd dotfiles
 
 After that, you just need to run the stow command to symlink the dotfiles you want.
 
-> [!CAUTION] I would not recommend stowing stuff like `git` because that contains my .gitconfig or `xorg` because thats specific to my monitor setup
+> [!CAUTION]
+> Do not stow or symlink `git/`. Keep `~/.gitconfig` as a regular local file so account switches and other Git config changes do not modify this repo. The `git/.gitconfig` file contains only the Homebrew-compatible GitHub CLI credential helper; copy that section into your local config if needed, and configure your own name and email locally.
+>
+> I would not recommend stowing `xorg` because it is specific to my monitor setup.
 
 ```shell
 # you can stow multiple things in one command!
