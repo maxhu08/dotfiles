@@ -8,3 +8,6 @@ vscode/*
 # zsh completion cache
 zsh/.zcompdump
 zsh/.zcompdump*
+
+# copilot fish
+/fish/.config/fish/completions/copilot.fish
