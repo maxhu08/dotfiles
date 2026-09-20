@@ -189,8 +189,6 @@ if test (uname) = "Darwin"
     eval (/opt/homebrew/bin/brew shellenv)
   end
 
-  # LM Studio CLI (macOS)
-  set -gx PATH $PATH /Users/mh/.lmstudio/bin
 else
   # linux or other platforms
   if test -x $HOME/.fnm/fnm
