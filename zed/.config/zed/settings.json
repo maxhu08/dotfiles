@@ -7,27 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "cli_default_open_behavior": "new_window",
-  "icon_theme": {
-    "mode": "light",
-    "light": "Material Icon Theme",
-    "dark": "Material Icon Theme",
-  },
-  "tabs": {
-    "file_icons": true,
-  },
-  "outline_panel": {
-    "dock": "right",
-  },
-  "collaboration_panel": {
-    "dock": "right",
-  },
+  // Agent and integrations
   "agent": {
     "default_model": {
       "provider": "openai-subscribed",
-      "model": "gpt-5.6-sol",
+      "model": "gpt-6-luna",
       "enable_thinking": true,
-      "effort": "medium",
+      "effort": "high",
     },
     "tool_permissions": {
       "default": "allow",
@@ -46,21 +32,63 @@
     "favorite_models": [],
     "model_parameters": [],
   },
-  "git_panel": {
-    "dock": "right",
-  },
-  "vim_mode": true,
-  "edit_predictions": {
-    "provider": "none",
-  },
   "agent_servers": {
     "codex-acp": {
       "type": "registry",
     },
   },
+  "cli_default_open_behavior": "new_window",
+
+  // Editor behavior and navigation
+  "base_keymap": "VSCode",
+  "cursor_blink": true,
+  "cursor_shape": "bar",
+  "edit_predictions": {
+    "provider": "none",
+  },
+  "format_on_save": "on",
+  "gutter": {
+    "line_numbers": true,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  // Keep long lines unwrapped unless wrapping is enabled elsewhere.
+  "preferred_line_length": 500,
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "tab_size": 2,
+  "vim_mode": true,
+
+  // Fonts and appearance
+  "buffer_font_family": "Jetbrains Mono",
+  "buffer_font_size": 15,
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
   "terminal": {
     "font_family": "Jetbrains Mono",
     "font_fallbacks": ["DejaVu Math TeX Gyre"],
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "VSCode Light Modern Tweaked",
+    "dark": "VSCode Darker Modern Tweaked",
+  },
+  "ui_font_size": 16,
+
+  // Panels and tab bar
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
   },
   "project_panel": {
     "dock": "right",
@@ -69,27 +97,11 @@
   "status_bar": {
     "experimental.show": false,
   },
-  "sticky_scroll": {
-    "enabled": false,
+  "tab_bar": {
+    // Hides the left/right navigation history arrows.
+    "show_nav_history_buttons": false,
   },
-  "gutter": {
-    "line_numbers": true,
-  },
-  "minimap": {
-    "show": "never",
-  },
-  "cursor_shape": "bar",
-  "cursor_blink": true,
-  "buffer_font_family": "Jetbrains Mono",
-  "format_on_save": "on",
-  "preferred_line_length": 500,
-  "tab_size": 2,
-  "base_keymap": "VSCode",
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "VSCode Light Modern Tweaked",
-    "dark": "VSCode Darker Modern Tweaked",
+  "tabs": {
+    "file_icons": true,
   },
 }

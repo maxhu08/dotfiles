@@ -6,6 +6,13 @@
     },
   },
   {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !menu",
+    "bindings": {
+      "j": ["workspace::SendKeystrokes", "g j"],
+      "k": ["workspace::SendKeystrokes", "g k"],
+    },
+  },
+  {
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
       "space space": "file_finder::Toggle",
@@ -15,6 +22,8 @@
     "bindings": {
       "cmd-g": "git_panel::Toggle",
       "cmd-e": "project_panel::Toggle",
+      "cmd-t": "agent::Toggle",
+      "cmd-shift-t": "multi_workspace::ToggleWorkspaceSidebar",
     },
   },
 ]
