@@ -1,0 +1,187 @@
+{
+  // * editor settings *
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.codeActionsOnSave": {},
+  "editor.cursorBlinking": "blink",
+  "editor.cursorSmoothCaretAnimation": "off", // "on" | "off"
+  "editor.cursorStyle": "line",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Jetbrains Mono",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "on",
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.wordWrapColumn": 500,
+  "window.titleBarStyle": "custom",
+
+  // * language formatter settings *
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[latex]": {
+    "editor.inlineSuggest.enabled": false,
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 100
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // * explorer and workbench settings *
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/*.meta": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.smoothScrolling": true,
+  "workbench.secondarySideBar.defaultVisibility": "visible",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+
+  // * formatter settings *
+  "prettier.arrowParens": "always",
+  "prettier.bracketSameLine": true,
+  "prettier.printWidth": 100,
+  "prettier.proseWrap": "never",
+  "prettier.trailingComma": "none",
+  "prettier.useEditorConfig": false,
+
+  // * terminal settings *
+  "terminal.integrated.defaultProfile.windows": "fish",
+  "terminal.integrated.fontFamily": "Jetbrains Mono, DejaVu Math TeX Gyre",
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.smoothScrolling": false,
+
+  // * vim settings *
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      // vim quick normal mode
+      "before": ["k", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      // search files
+      "before": ["<C-p>"],
+      "commands": ["workbench.action.quickOpen"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      // wrapped line fix
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      // wrapped line fix
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      // wrapped line fix
+      "before": ["0"],
+      "after": ["g", "0"]
+    },
+    {
+      // wrapped line fix
+      "before": ["^"],
+      "after": ["g", "^"]
+    },
+    {
+      // wrapped line fix
+      "before": ["$"],
+      "after": ["g", "$"]
+    },
+    {
+      // vim move lines
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      // vim move lines
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      // search files
+      "before": ["<C-p>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // search files (with leader)
+      "before": ["<leader>", "<leader>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // toggle sidebar
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // leap plugin find word globally
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["leap.find"]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindings": [],
+
+  // * screencast settings *
+  "screencastMode.fontSize": 48,
+  "screencastMode.mouseIndicatorColor": "#00000000",
+
+  // * miscellaneous settings *
+  "cmake.configureOnOpen": false,
+  "cmake.showOptionsMovedNotification": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.ignoreRebaseWarning": true,
+  "go.toolsManagement.autoUpdate": true,
+  "html.format.contentUnformatted": "",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "redhat.telemetry.enabled": false,
+  "settingsSync.ignoredSettings": [],
+  "svg.preview.mode": "img",
+  "window.zoomLevel": 2,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.formatting.tex-fmt.path": "/opt/homebrew/bin/tex-fmt",
+  "latex-workshop.formatting.tex-fmt.args": ["--wraplen", "100", "--tabsize", "2"],
+  "workbench.colorTheme": "Darker Modern Tweaked",
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "window.restoreWindows": "none",
+  "editor.accessibilitySupport": "on"
+}

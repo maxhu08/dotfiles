@@ -3,7 +3,7 @@
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.codeActionsOnSave": {},
-  "editor.cursorBlinking": "expand",
+  "editor.cursorBlinking": "blink",
   "editor.cursorSmoothCaretAnimation": "off", // "on" | "off"
   "editor.cursorStyle": "line",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -182,5 +182,6 @@
   "latex-workshop.formatting.tex-fmt.args": ["--wraplen", "100", "--tabsize", "2"],
   "workbench.colorTheme": "Darker Modern Tweaked",
   "chat.titleBar.openInAgentsWindow.enabled": false,
-  "window.restoreWindows": "none"
+  "window.restoreWindows": "none",
+  "editor.accessibilitySupport": "on"
 }

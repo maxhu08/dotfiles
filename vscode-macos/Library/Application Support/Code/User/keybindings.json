@@ -1,0 +1,56 @@
+// * keybinds to make vim easier *
+
+[
+  // terminal
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+;",
+    "command": "workbench.action.terminal.new"
+  },
+  // codex
+  {
+    "key": "ctrl+shift+c",
+    "command": "chatgpt.openSidebar"
+  },
+  // open command palette
+  {
+    "key": "ctrl+space",
+    "command": "workbench.action.quickOpen"
+  },
+  // move up and down in suggestions box
+  {
+    "key": "ctrl+n",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  // move up and down in quick fix box
+  {
+    "key": "ctrl+n",
+    "command": "selectNextCodeAction",
+    "when": "editorFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevCodeAction",
+    "when": "editorFocus && !suggestWidgetVisible"
+  },
+  // move up and down in quick open file box
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  }
+]

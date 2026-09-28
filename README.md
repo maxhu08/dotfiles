@@ -1,52 +1,56 @@
-# dotfiles
+# Dotfiles
+
+My personal configuration files, managed with [GNU Stow](https://www.gnu.org/software/stow/). Stow creates symlinks from each package in this repository into your home directory.
 
 > [!IMPORTANT]
-> If you are looking for my old dotfiles (which do not use stow), you can find them [here](https://github.com/maxhu08/dotfiles-old).
+> My [old dotfiles](https://github.com/maxhu08/dotfiles-old) use a different setup and do not use Stow.
 
-This repo contains all my configs I use.
+## Getting started
 
-## getting-started
+Install Stow, clone this repository, and enter it:
 
-My dotfiles are managed with `stow`, which manages symlinks so that the files in this dotfiles repo are synced with the actual configs.
-
-To get started with using my dotfiles run these commmands:
-
-```shell
+```sh
 # macOS
 brew install stow
 
-# arch
+# Arch Linux
 sudo pacman -S stow
-
-# gentoo
-doas emerge -av app-admin/stow
 
 git clone https://github.com/maxhu08/dotfiles
 cd dotfiles
 ```
 
-After that, you just need to run the stow command to symlink the dotfiles you want.
+Stow will not overwrite existing, conflicting config files. Back up or move any existing files before stowing their packages.
 
-> [!CAUTION]
-> Do not stow or symlink `git/`. Keep `~/.gitconfig` as a regular local file so account switches and other Git config changes do not modify this repo. The `git/.gitconfig` file contains only the Homebrew-compatible GitHub CLI credential helper; copy that section into your local config if needed, and configure your own name and email locally.
->
-> I would not recommend stowing `xorg` because it is specific to my monitor setup.
+## Stow configurations
 
-```shell
-# you can stow multiple things in one command!
-stow alacritty fish kitty nvim picom tmux vscode xorg zed
+From the repository directory, stow the packages you want:
+
+```sh
+stow alacritty fish kitty nvim picom tmux zed
 ```
 
-## install-packages
+VS Code stores its user configuration in different locations on Linux and macOS. From the repository directory, stow the package for your operating system:
 
-Make sure to install the programs, stow just symlinks the configs. You still need to install the programs!
+```sh
+# macOS
+stow vscode-macos
 
-To get all the packages, check out my [rebos-config](https://github.com/maxhu08/rebos-config-arch) for arch.
+# Linux
+stow vscode-linux
+```
 
-## wallpapers
+> [!CAUTION]
+> Do not stow or symlink `git/`. Keep `~/.gitconfig` as a regular local file so account switches and other Git config changes do not modify this repository. `git/.gitconfig` contains only the Homebrew-compatible GitHub CLI credential helper; copy that section into your local config if needed, and configure your own name and email locally.
+>
+> `xorg/` is specific to my monitor setup and is not included in the example command above.
 
-My wallapers are not in this repo. To access all my of wallpapers, check out my [wallpapers](https://github.com/maxhu08/wallpapers) repo.
+## Packages and wallpapers
 
-## star-history
+Stow only links configuration files; install the corresponding programs separately. For Arch package setup, see my [rebos-config](https://github.com/maxhu08/rebos-config-arch).
+
+Wallpapers are maintained separately in my [wallpapers repository](https://github.com/maxhu08/wallpapers).
+
+## Star history
 
 [![Star History Chart](https://api.star-history.com/svg?repos=maxhu08/dotfiles&type=Date)](https://star-history.com/#maxhu08/dotfiles&Date)
