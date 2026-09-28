@@ -1,6 +1,7 @@
 # dotfiles
 
-> [!IMPORTANT] If you are looking for my old dotfiles (which do not use stow), you can find them [here](https://github.com/maxhu08/dotfiles-old)
+> [!IMPORTANT]
+> If you are looking for my old dotfiles (which do not use stow), you can find them [here](https://github.com/maxhu08/dotfiles-old).
 
 This repo contains all my configs I use.
 
@@ -11,6 +12,9 @@ My dotfiles are managed with `stow`, which manages symlinks so that the files in
 To get started with using my dotfiles run these commmands:
 
 ```shell
+# macOS
+brew install stow
+
 # arch
 sudo pacman -S stow
 
