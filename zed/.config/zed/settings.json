@@ -59,13 +59,14 @@
     "enabled": false,
   },
   "tab_size": 2,
+  "colorize_brackets": true,
   "vim_mode": true,
 
   // Fonts and appearance
   "buffer_font_family": "Jetbrains Mono",
   "buffer_font_size": 15,
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Material Icon Theme",
     "dark": "Material Icon Theme",
   },
