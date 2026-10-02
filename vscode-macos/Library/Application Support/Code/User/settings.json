@@ -21,6 +21,7 @@
   "editor.tabSize": 2,
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.wordWrapColumn": 500,
+  "accessibility.signals.sounds.volume": 0,
   "window.titleBarStyle": "custom",
 
   // * language formatter settings *
@@ -67,7 +68,6 @@
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": false,
 
   // * formatter settings *
   "prettier.arrowParens": "always",
@@ -79,6 +79,7 @@
 
   // * terminal settings *
   "terminal.integrated.defaultProfile.windows": "fish",
+  "terminal.integrated.enableBell": false,
   "terminal.integrated.fontFamily": "Jetbrains Mono, DejaVu Math TeX Gyre",
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.smoothScrolling": false,
@@ -183,5 +184,6 @@
   "workbench.colorTheme": "Darker Modern Tweaked",
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "window.restoreWindows": "none",
-  "editor.accessibilitySupport": "on"
+  "editor.accessibilitySupport": "off",
+  "workbench.statusBar.visible": false
 }
