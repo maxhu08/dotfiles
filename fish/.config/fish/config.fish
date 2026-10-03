@@ -15,23 +15,11 @@ set fish_greeting (set_color --bold efcf40)">"(set_color ef9540)"<"(set_color ea
   (set_color normal)"fish $FISH_VERSION" \
   (set_color normal)"| $KERNEL"
 
-# Custom Github scripts 
-if test -f "$HOME/Documents/Scripts/ghstat.sh"
-  alias ghstat '"$HOME/Documents/Scripts/ghstat.sh"'
-end
-
-if test -f "$HOME/Documents/Scripts/ghswitch.sh"
-  alias ghswitch '"$HOME/Documents/Scripts/ghswitch.sh"'
-end
-
-if test -f "$HOME/Documents/Scripts/ghwelc.sh"
-  alias ghwelc '"$HOME/Documents/Scripts/ghwelc.sh"'
-end
-
+# GitHub account welcome, managed by multigh.
 function fish_greeting
   echo $fish_greeting
-  if test -f "$HOME/Documents/Scripts/ghwelc.sh"
-    /bin/sh "$HOME/Documents/Scripts/ghwelc.sh"
+  if command -sq mgh
+    command mgh welcome
   end
 end
 
@@ -205,3 +193,7 @@ end
 
 # uv
 fish_add_path "/Users/mh/.local/bin"
+
+if status is-interactive; and command -sq mgh
+  command mgh init fish | source
+end
