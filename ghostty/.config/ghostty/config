@@ -4,6 +4,11 @@ background-opacity = 1
 window-padding-x = 4
 window-padding-y = 4
 
+# start new windows at ~ without restoring previous sessions.
+working-directory = home
+window-inherit-working-directory = false
+window-save-state = never
+
 font-family = "JetBrainsMono Nerd Font Mono"
 font-family = "JetBrains Mono NerdFont"
 font-size = 18
