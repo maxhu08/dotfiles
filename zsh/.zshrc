@@ -199,3 +199,13 @@ kernel_version=$(uname -r 2> /dev/null)
 print -P "${GREETING_PROMPT} zsh ${ZSH_VERSION} | ${kernel_version}"
 
 zsh_refresh_prompt
+
+# multigh
+case ":$PATH:" in
+  *":$HOME/.local/bin:"*) ;;
+  *) export PATH="$HOME/.local/bin:$PATH" ;;
+esac
+
+if command -v mgh > /dev/null 2>&1; then
+  eval "$(mgh init zsh)"
+fi
