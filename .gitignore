@@ -27,3 +27,6 @@ zsh/.zcompdump*
 
 # copilot fish
 /fish/.config/fish/completions/copilot.fish
+
+# Fish universal variables, managed locally by Fish
+/fish/.config/fish/fish_variables
