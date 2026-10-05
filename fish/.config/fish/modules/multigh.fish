@@ -1,3 +1,3 @@
 if status is-interactive; and command -sq mgh
-  command mgh init fish | source
+  command mgh shell init fish | source
 end

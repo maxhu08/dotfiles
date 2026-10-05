@@ -188,5 +188,6 @@
   "accessibility.signals.terminalBell": {
     "sound": "off"
   },
-  "terminal.integrated.enableVisualBell": false
+  "terminal.integrated.enableVisualBell": false,
+  "terminal.integrated.initialHint": false
 }

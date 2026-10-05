@@ -15,6 +15,6 @@ end
 function fish_greeting
   echo $fish_greeting
   if command -sq mgh
-    command mgh welcome
+    command mgh internal welcome
   end
 end
