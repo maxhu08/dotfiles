@@ -16,14 +16,16 @@ For a Windows keyboard, use `macos-with-windows-keyboard.json` in the copy comma
 
 Both versions:
 
-- **Command + backtick** → Mission Control.
-- **Control + backtick** → Show Desktop (**Fn + F11**).
-- **Command + Option + Shift + M** on Mac keyboards → Fill/Maximize window (**Control + Fn + F**).
+- **Command + backtick** → Mission Control
+- **Control + backtick** → Show Desktop (**Fn + F11**)
+- **Command + Option + Shift + M** on Mac keyboards → Fill/Maximize window (**Control + Fn + F**)
 
 The Windows-keyboard version also adds:
 
-- **Control** → Command for ordinary shortcuts.
-- **Control + Space** → Control + Space.
-- **Windows + Space** → Command + Space.
-- **Control + Backspace** → Option + Backspace.
-- **Windows + Alt + Shift + M** on the configured Windows keyboard → Fill/Maximize window (**Control + Fn + F**).
+- **Control** → Command for ordinary shortcuts
+- **Control + Space** → Control + Space
+- **Control + Tab** → Control + Tab
+- **Windows + Space** → Command + Space
+- **Windows + Tab** → Command + Tab
+- **Control + Backspace** → Option + Backspace
+- **Windows + Alt + Shift + M** on the configured Windows keyboard → Fill/Maximize window (**Control + Fn + F**)

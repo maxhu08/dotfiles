@@ -107,8 +107,126 @@
             ]
           },
           {
-            "description": "Windows keyboard: Control to Command; Control + Space stays Control + Space; Control + Backspace deletes a word; Windows + Space to Command + Space",
+            "description": "Windows keyboard: Control to Command; Control + Space stays Control + Space; Control + Tab stays Control + Tab; Control + Backspace deletes a word; Windows + Space to Command + Space; Windows + Tab to Command + Tab",
             "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  }
+                ]
+              },
               {
                 "type": "basic",
                 "from": {
