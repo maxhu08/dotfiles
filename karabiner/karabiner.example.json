@@ -1,0 +1,447 @@
+{
+  "profiles": [
+    {
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      },
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Windows keyboard: Control to Command; Control + Space stays Control + Space; Control + Backspace deletes a word; Windows + Space to Command + Space",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f11",
+                    "modifiers": [
+                      "fn"
+                    ],
+                    "repeat": false
+                  },
+                  {
+                    "key_code": "vk_none"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f11",
+                    "modifiers": [
+                      "fn"
+                    ],
+                    "repeat": false
+                  },
+                  {
+                    "key_code": "vk_none"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_control",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "windows_external_left_control",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "left_command"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "windows_external_left_control",
+                      "value": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_control",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "windows_external_right_control",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "right_command"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "windows_external_right_control",
+                      "value": 0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Control + ` -> Show Desktop (Fn + F11)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f11",
+                    "repeat": false,
+                    "modifiers": [
+                      "fn"
+                    ]
+                  },
+                  {
+                    "key_code": "vk_none"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Command + ` -> Mission Control",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "apple_vendor_keyboard_key_code": "mission_control"
+                  },
+                  {
+                    "key_code": "vk_none"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
