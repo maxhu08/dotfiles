@@ -9,6 +9,104 @@
       "complex_modifications": {
         "rules": [
           {
+            "description": "Command + Option + Shift + M -> Fill/Maximize window (Control + Fn + F)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": [
+                      "control",
+                      "fn"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Windows keyboard: Windows + Alt + Shift + M -> Fill/Maximize window (Control + Fn + F)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": [
+                      "control",
+                      "fn"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Windows keyboard: Control to Command; Control + Space stays Control + Space; Control + Backspace deletes a word; Windows + Space to Command + Space",
             "manipulators": [
               {

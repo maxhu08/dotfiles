@@ -9,6 +9,37 @@
       "complex_modifications": {
         "rules": [
           {
+            "description": "Command + Option + Shift + M -> Fill/Maximize window (Control + Fn + F)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": [
+                      "control",
+                      "fn"
+                    ],
+                    "repeat": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Control + ` -> Show Desktop (Fn + F11)",
             "manipulators": [
               {
