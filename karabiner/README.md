@@ -1,22 +1,30 @@
 # Karabiner
 
-Copy the example from the dotfiles repository root. Do not stow this folder.
+- Use `macos.json` with Mac keyboards.
+- Use `macos-with-windows-keyboard.json` if you also use a Windows keyboard with your Mac.
+
+Copy the chosen file from the dotfiles repository root. Do not stow this folder.
 
 ```sh
 mkdir -p ~/.config/karabiner
-cp karabiner/karabiner.example.json ~/.config/karabiner/karabiner.json
+cp karabiner/macos.json ~/.config/karabiner/karabiner.json
 ```
 
-If you have a Windows keyboard, replace every `"vendor_id": 0` and `"product_id": 0` in the local config with its decimal IDs from **Karabiner-EventViewer → Devices**. Leave other numbers unchanged and keep actual IDs out of the public example.
+For a Windows keyboard, use `macos-with-windows-keyboard.json` in the copy command.
+Then replace every `"vendor_id": 0` and `"product_id": 0` in the local config with
+its decimal IDs from **Karabiner-EventViewer → Devices**. Leave other numbers
+unchanged and keep actual IDs out of this repository.
 
 ## Keybinds
+
+Both versions:
 
 - **Command + backtick** → Mission Control.
 - **Control + backtick** → Show Desktop (**Fn + F11**).
 
-For Connected Windows keyboard:
+The Windows-keyboard version also adds:
 
-- **Control** → Command for ordinary shortcuts
-- **Control + Space** → Control + Space
-- **Windows + Space** → Command + Space
-- **Control + Backspace** → Option + Backspace
+- **Control** → Command for ordinary shortcuts.
+- **Control + Space** → Control + Space.
+- **Windows + Space** → Command + Space.
+- **Control + Backspace** → Option + Backspace.
