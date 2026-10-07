@@ -16,7 +16,6 @@ For a Windows keyboard, use `macos-with-windows-keyboard.json` in the copy comma
 
 Both versions:
 
-- **Command + backtick** → Mission Control
 - **Control + backtick** → Show Desktop (**Fn + F11**)
 - **Command + Option + Shift + M** on Mac keyboards → Fill/Maximize window (**Control + Fn + F**)
 

@@ -189,5 +189,6 @@
     "sound": "off"
   },
   "terminal.integrated.enableVisualBell": false,
-  "terminal.integrated.initialHint": false
+  "terminal.integrated.initialHint": false,
+  "chat.titleBar.signIn.enabled": false
 }

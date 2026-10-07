@@ -69,33 +69,6 @@
                 ]
               }
             ]
-          },
-          {
-            "description": "Command + ` -> Mission Control",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "grave_accent_and_tilde",
-                  "modifiers": {
-                    "mandatory": [
-                      "command"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "apple_vendor_keyboard_key_code": "mission_control"
-                  },
-                  {
-                    "key_code": "vk_none"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
           }
         ]
       }
