@@ -40,6 +40,72 @@
             ]
           },
           {
+            "description": "Command + Option + Shift + H -> Tile window left (Control + Option + Shift + Command + Left Arrow)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ],
+                    "repeat": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Command + Option + Shift + L -> Tile window right (Control + Option + Shift + Command + Right Arrow)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ],
+                    "repeat": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Control + ` -> Show Desktop (Fn + F11)",
             "manipulators": [
               {

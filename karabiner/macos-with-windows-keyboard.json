@@ -107,6 +107,210 @@
             ]
           },
           {
+            "description": "Command + Option + Shift + H -> Tile window left (Control + Option + Shift + Command + Left Arrow)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Windows keyboard: Windows + Alt + Shift + H -> Tile window left (Control + Option + Shift + Command + Left Arrow)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Command + Option + Shift + L -> Tile window right (Control + Option + Shift + Command + Right Arrow)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Windows keyboard: Windows + Alt + Shift + L -> Tile window right (Control + Option + Shift + Command + Right Arrow)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Windows keyboard: Control to Command; Control + Space stays Control + Space; Control + Tab stays Control + Tab; Control + Backspace deletes a word; Windows + Space to Command + Space; Windows + Tab to Command + Tab",
             "manipulators": [
               {
