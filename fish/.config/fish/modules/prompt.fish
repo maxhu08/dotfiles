@@ -23,7 +23,7 @@ end
 function fish_prompt
   set_color --bold 4086ef
 
-  set transformed_pwd (prompt_pwd | string replace -r "^~" (set_color --bold 06b6d4)"~"(set_color --bold 3b82f6))
+  set transformed_pwd (prompt_pwd (pwd -P) | string replace -r "^~" (set_color --bold 06b6d4)"~"(set_color --bold 3b82f6))
 
   echo -n $transformed_pwd
 
