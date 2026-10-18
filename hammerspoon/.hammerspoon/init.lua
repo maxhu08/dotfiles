@@ -44,3 +44,22 @@ finderWindowFilter:subscribe(
     }, 0)
   end
 )
+
+local ghosttyID = "com.mitchellh.ghostty"
+
+local function toggleGhostty()
+  -- silently return if Ghostty is not installed
+  if not hs.application.pathForBundleID(ghosttyID) then
+    return
+  end
+
+  local app = hs.application.get(ghosttyID)
+
+  if app and app:isFrontmost() then
+    app:hide()
+  else
+    hs.application.launchOrFocusByBundleID(ghosttyID)
+  end
+end
+
+hs.hotkey.bind({"alt"}, "space", toggleGhostty)
