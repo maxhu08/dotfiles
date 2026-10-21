@@ -28,6 +28,7 @@ The Windows-keyboard version also adds:
 - **Control + Tab** → Control + Tab
 - **Windows + Space** → Command + Space
 - **Windows + Tab** → Command + Tab
+- **Windows + Shift + S** on the configured Windows keyboard → Screenshot selection (**Command + Shift + 4**)
 - **Control + Backspace** → Option + Backspace
 - **Windows + Alt + Shift + M** on the configured Windows keyboard → Fill/Maximize window (**Control + Fn + F**)
 - **Windows + Alt + Shift + H** on the configured Windows keyboard → Tile window left (**Control + Option + Shift + Command + Left Arrow**)

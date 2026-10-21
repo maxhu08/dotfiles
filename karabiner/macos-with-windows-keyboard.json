@@ -311,6 +311,59 @@
             ]
           },
           {
+            "description": "Windows keyboard: Windows + Shift + S -> Screenshot selection (Command + Shift + 4)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "shift"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "4",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": false
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 0,
+                        "product_id": 0,
+                        "is_keyboard": true,
+                        "is_built_in_keyboard": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_left_control",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "windows_external_right_control",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Windows keyboard: Control to Command; Control + Space stays Control + Space; Control + Tab stays Control + Tab; Control + Backspace deletes a word; Windows + Space to Command + Space; Windows + Tab to Command + Tab",
             "manipulators": [
               {
