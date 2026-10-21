@@ -27,7 +27,8 @@ The Windows-keyboard version also adds:
 - **Control + Space** → Control + Space
 - **Control + Tab** → Control + Tab
 - **Windows + Space** → Command + Space
-- **Windows + Tab** → Command + Tab
+- **Windows + Tab** → Option + Tab
+- **Alt + Tab** → Command + Tab (switch apps); hold **Shift** to switch backward
 - **Windows + Shift + S** on the configured Windows keyboard → Screenshot selection (**Command + Shift + 4**)
 - **Control + Backspace** → Option + Backspace
 - **Windows + Alt + Shift + M** on the configured Windows keyboard → Fill/Maximize window (**Control + Fn + F**)

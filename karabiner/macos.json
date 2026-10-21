@@ -3,9 +3,7 @@
     {
       "name": "Default profile",
       "selected": true,
-      "virtual_hid_keyboard": {
-        "keyboard_type_v2": "ansi"
-      },
+      "virtual_hid_keyboard": {"keyboard_type_v2": "ansi"},
       "complex_modifications": {
         "rules": [
           {
@@ -13,29 +11,8 @@
             "manipulators": [
               {
                 "type": "basic",
-                "from": {
-                  "key_code": "m",
-                  "modifiers": {
-                    "mandatory": [
-                      "command",
-                      "option",
-                      "shift"
-                    ],
-                    "optional": [
-                      "caps_lock"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f",
-                    "modifiers": [
-                      "control",
-                      "fn"
-                    ],
-                    "repeat": false
-                  }
-                ]
+                "from": {"key_code": "m", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"key_code": "f", "modifiers": ["control", "fn"], "repeat": false}]
               }
             ]
           },
@@ -44,31 +21,8 @@
             "manipulators": [
               {
                 "type": "basic",
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "mandatory": [
-                      "command",
-                      "option",
-                      "shift"
-                    ],
-                    "optional": [
-                      "caps_lock"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_arrow",
-                    "modifiers": [
-                      "control",
-                      "option",
-                      "shift",
-                      "command"
-                    ],
-                    "repeat": false
-                  }
-                ]
+                "from": {"key_code": "h", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"key_code": "left_arrow", "modifiers": ["control", "option", "shift", "command"], "repeat": false}]
               }
             ]
           },
@@ -77,31 +31,8 @@
             "manipulators": [
               {
                 "type": "basic",
-                "from": {
-                  "key_code": "l",
-                  "modifiers": {
-                    "mandatory": [
-                      "command",
-                      "option",
-                      "shift"
-                    ],
-                    "optional": [
-                      "caps_lock"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "right_arrow",
-                    "modifiers": [
-                      "control",
-                      "option",
-                      "shift",
-                      "command"
-                    ],
-                    "repeat": false
-                  }
-                ]
+                "from": {"key_code": "l", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"key_code": "right_arrow", "modifiers": ["control", "option", "shift", "command"], "repeat": false}]
               }
             ]
           },
@@ -112,27 +43,9 @@
                 "type": "basic",
                 "from": {
                   "key_code": "grave_accent_and_tilde",
-                  "modifiers": {
-                    "mandatory": [
-                      "control"
-                    ],
-                    "optional": [
-                      "caps_lock"
-                    ]
-                  }
+                  "modifiers": {"mandatory": ["control"], "optional": ["caps_lock"]}
                 },
-                "to": [
-                  {
-                    "key_code": "f11",
-                    "repeat": false,
-                    "modifiers": [
-                      "fn"
-                    ]
-                  },
-                  {
-                    "key_code": "vk_none"
-                  }
-                ]
+                "to": [{"key_code": "f11", "repeat": false, "modifiers": ["fn"]}, {"key_code": "vk_none"}]
               }
             ]
           }
