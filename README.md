@@ -49,6 +49,15 @@ stow vscode-linux
 
 Stow only links configuration files; install the corresponding programs separately. For Arch package setup, see my [rebos-config](https://github.com/maxhu08/rebos-config-arch).
 
+On macOS, link the curated Brewfile to `~/.Brewfile` and install essentials from the repository directory:
+
+```sh
+stow homebrew
+brew bundle install --file="$HOME/.Brewfile" --no-upgrade
+```
+
+Extra Homebrew apps can stay installed without being listed. Avoid `brew bundle cleanup` with this essentials-only file.
+
 Wallpapers are maintained separately in my [wallpapers repository](https://github.com/maxhu08/wallpapers).
 
 ## Star history
