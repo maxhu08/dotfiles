@@ -127,6 +127,41 @@
             ]
           },
           {
+            "description": "Windows keyboard: Control + Left/Right Arrow -> Move by word (Option + Arrow, Shift to select)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {"key_code": "left_arrow", "modifiers": {"mandatory": ["command"], "optional": ["caps_lock", "shift"]}},
+                "to": [{"key_code": "left_arrow", "modifiers": ["left_option"]}],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [{"vendor_id": 0, "product_id": 0, "is_keyboard": true, "is_built_in_keyboard": false}]
+                  },
+                  {
+                    "type": "expression_if",
+                    "expression": "windows_external_left_control == 1 or windows_external_right_control == 1"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {"key_code": "right_arrow", "modifiers": {"mandatory": ["command"], "optional": ["caps_lock", "shift"]}},
+                "to": [{"key_code": "right_arrow", "modifiers": ["left_option"]}],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [{"vendor_id": 0, "product_id": 0, "is_keyboard": true, "is_built_in_keyboard": false}]
+                  },
+                  {
+                    "type": "expression_if",
+                    "expression": "windows_external_left_control == 1 or windows_external_right_control == 1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Windows keyboard: Control, Tab, Space, Backspace and Show Desktop shortcuts",
             "manipulators": [
               {

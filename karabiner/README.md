@@ -31,6 +31,8 @@ The Windows-keyboard version also adds:
 - **Alt + Tab** → Command + Tab (switch apps); hold **Shift** to switch backward
 - **Windows + Shift + S** on the configured Windows keyboard → Screenshot selection (**Command + Shift + 4**)
 - **Control + Backspace** → Option + Backspace
+- **Control + Left/Right Arrow** → Option + Left/Right Arrow (move one word); add **Shift** to select
+- **Windows + Left/Right Arrow** → Command + Left/Right Arrow (move to line start/end); add **Shift** to select
 - **Windows + Alt + Shift + M** on the configured Windows keyboard → Fill/Maximize window (**Control + Fn + F**)
 - **Windows + Alt + Shift + H** on the configured Windows keyboard → Tile window left (**Control + Option + Shift + Command + Left Arrow**)
 - **Windows + Alt + Shift + L** on the configured Windows keyboard → Tile window right (**Control + Option + Shift + Command + Right Arrow**)

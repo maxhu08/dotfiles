@@ -24,5 +24,5 @@ case ":$PATH:" in
 esac
 
 if command -v mgh > /dev/null 2>&1; then
-  eval "$(mgh init bash)"
+  eval "$(mgh shell init bash)"
 fi
