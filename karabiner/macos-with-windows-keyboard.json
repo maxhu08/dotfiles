@@ -7,6 +7,59 @@
       "complex_modifications": {
         "rules": [
           {
+            "description": "Command + Option + Shift + < / > -> Move window to display on left/right",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {"key_code": "comma", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"shell_command": "/usr/bin/open -g \"hammerspoon://move-window-left\"", "repeat": false}],
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [{"vendor_id": 0, "product_id": 0, "is_keyboard": true, "is_built_in_keyboard": false}]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {"key_code": "comma", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"shell_command": "/usr/bin/open -g \"hammerspoon://move-window-left\"", "repeat": false}],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [{"vendor_id": 0, "product_id": 0, "is_keyboard": true, "is_built_in_keyboard": false}]
+                  },
+                  {"type": "variable_unless", "name": "windows_external_left_control", "value": 1},
+                  {"type": "variable_unless", "name": "windows_external_right_control", "value": 1}
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {"key_code": "period", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"shell_command": "/usr/bin/open -g \"hammerspoon://move-window-right\"", "repeat": false}],
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [{"vendor_id": 0, "product_id": 0, "is_keyboard": true, "is_built_in_keyboard": false}]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {"key_code": "period", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"shell_command": "/usr/bin/open -g \"hammerspoon://move-window-right\"", "repeat": false}],
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [{"vendor_id": 0, "product_id": 0, "is_keyboard": true, "is_built_in_keyboard": false}]
+                  },
+                  {"type": "variable_unless", "name": "windows_external_left_control", "value": 1},
+                  {"type": "variable_unless", "name": "windows_external_right_control", "value": 1}
+                ]
+              }
+            ]
+          },
+          {
             "description": "Command + Option + Shift + M -> Fill/Maximize window (Control + Fn + F)",
             "manipulators": [
               {

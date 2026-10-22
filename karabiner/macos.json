@@ -7,6 +7,21 @@
       "complex_modifications": {
         "rules": [
           {
+            "description": "Command + Option + Shift + < / > -> Move window to display on left/right",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {"key_code": "comma", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"shell_command": "/usr/bin/open -g \"hammerspoon://move-window-left\"", "repeat": false}]
+              },
+              {
+                "type": "basic",
+                "from": {"key_code": "period", "modifiers": {"mandatory": ["command", "option", "shift"], "optional": ["caps_lock"]}},
+                "to": [{"shell_command": "/usr/bin/open -g \"hammerspoon://move-window-right\"", "repeat": false}]
+              }
+            ]
+          },
+          {
             "description": "Command + Option + Shift + M -> Fill/Maximize window (Control + Fn + F)",
             "manipulators": [
               {
