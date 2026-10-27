@@ -70,4 +70,5 @@ Every changed line should trace directly to the user's request.
 - Reproduce bugs before fixing them; verify invalid inputs for validation changes and preserve behavior during refactors.
 - Work toward those criteria and verify the result. If a check fails, investigate and correct the cause rather than declaring completion.
 - Review the final diff for unintended changes and run relevant checks.
+- Always rebuild after making code changes, before declaring the task complete.
 - Report what changed, what was actually verified, and any remaining risks or verification gaps. Never claim checks passed unless they ran successfully.
