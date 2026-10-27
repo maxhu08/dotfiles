@@ -1,97 +1,73 @@
 # AGENTS.md
 
-## Coding Approach
-
-### Think Before Coding
+## Think Before Coding
 
 Do not assume, hide confusion, or skip tradeoffs.
 
-Before implementing:
+- Investigate relevant code and context before asking questions. Do not ask the user for information you can discover yourself.
+- Make assumptions and tradeoffs explicit. When requirements have materially different interpretations, ask rather than silently choosing.
+- Challenge unnecessary complexity and conflicting requirements. Recommend simpler alternatives when appropriate.
+- If new evidence invalidates the approach, reassess. Ask when scope or intended behavior changes; resolve ordinary implementation details independently.
 
-- State assumptions explicitly. If uncertain, ask.
-- If multiple interpretations exist, present them instead of choosing silently.
-- If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop, name what is confusing, and ask.
+## Plan Mode
 
-### Simplicity First
+- Clarify before proposing a solution. Ask focused questions about requirements, constraints, tradeoffs, and relevant edge cases.
+- Continue with follow-up questions until no unresolved decisions block implementation. Do not invent answers that materially affect behavior.
+- Avoid hypothetical cases or questions that would not change the approach. Explicitly agree on assumptions when uncertainty cannot be resolved.
+- After clarification, summarize the agreed behavior, approach, scope boundaries, and verification steps.
 
-Write the minimum code that solves the problem. Avoid speculative work.
+## Simplicity First
 
-- Do not add features beyond what was asked.
-- Do not add abstractions for single-use code.
-- Do not add flexibility or configurability that was not requested.
-- Do not add error handling for impossible scenarios.
+- Write the smallest clear solution that meets the requirements. Do not add speculative features, configuration, or flexibility.
+- Add guards and error handling for realistic failures or untrusted boundaries, not impossible states already ruled out by types, validation, or enforced invariants. Avoid redundant checks and unreachable fallbacks.
+- Prefer existing project utilities and standard tools. Add dependencies only when their benefits justify the maintenance cost; do not reinvent substantial, well-solved functionality merely to avoid one.
 - If 200 lines could be 50, rewrite it.
 - Ask: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
-### Surgical Changes
+## Surgical Changes
 
 Touch only what you must. Clean up only your own mess.
 
-When editing existing code:
-
-- Do not improve adjacent code, comments, or formatting unless needed for the task.
-- Do not refactor things that are not broken.
-- Match existing style, even if you would do it differently.
-- If you notice unrelated dead code, mention it instead of deleting it.
-
-When your changes create orphans:
-
-- Remove imports, variables, and functions that your changes made unused.
-- Do not remove pre-existing dead code unless asked.
+- Match surrounding conventions; do not reformat, refactor, or clean up unrelated code.
+- Preserve unfamiliar changes. Remove imports, variables, and helpers made unused by your changes; mention unrelated dead code rather than deleting it.
 
 Every changed line should trace directly to the user's request.
 
-### Goal-Driven Execution
+## Reuse and Encapsulate
 
-Define success criteria and loop until verified.
-
-Transform tasks into verifiable goals:
-
-- "Add validation" means write tests for invalid inputs, then make them pass.
-- "Fix the bug" means write a test that reproduces it, then make it pass.
-- "Refactor X" means ensure tests pass before and after.
-
-For multi-step tasks, state a brief plan:
-
-1. [Step] -> verify: [check]
-2. [Step] -> verify: [check]
-3. [Step] -> verify: [check]
+- Look for existing solutions before writing new logic. Share genuinely repeated behavior instead of maintaining near-duplicate implementations.
+- Do not combine code merely because it looks similar. Avoid speculative frameworks or helpers with flags and special cases for unrelated uses.
+- Keep logic local unless extraction improves clarity, reuse, testing, composition, or correctness, or hides meaningful complexity.
+- Hide complex implementations behind small, clear interfaces. Expose only what callers need and keep internals private.
+- Own validation, invariants, and state transitions at the appropriate boundary. Make correct usage easy and invalid states or operation sequences difficult to express.
+- Fix root causes where they belong rather than adding workarounds at every call site. Never conceal failures by weakening validation or swallowing errors.
 
 ## Code Style
 
-Prefer correctness, consistency with surrounding code, and readability over applying rules mechanically.
+- Prefer correctness, readability, and consistency over mechanically applying rules.
+- Use simple control flow: early returns for guards, `if` / `else` for paired decisions, and ternaries for simple conditional values.
+- Prefer immutable values; reassign only for genuinely changing state.
+- Introduce variables when they name an idea, remove repetition, or improve readability.
+- Use short names locally and descriptive names across wider scopes. Keep object context visible unless destructuring clearly helps.
+- Prefer collection transformations when they clarify data flow; use loops when simpler. Make filtering and validation explicit when later code relies on them.
+- Rely on clear type inference. Add types at public boundaries or when they improve clarity; avoid broad or unchecked types except at genuinely unknown boundaries.
+- Catch errors only to recover, add context, clean up, fall back, or translate them meaningfully.
+- Comment on why, not what.
 
-Follow the style of nearby code unless it conflicts with correctness or clarity.
+## Test What Matters
 
-Write for clarity. Keep logic local until extraction improves reuse, naming, testing, or composition.
+- Test meaningful behavior and contracts, not duplicated implementation logic. Each new test should catch a plausible failure that matters.
+- Add regression coverage when it provides meaningful protection. Reuse existing coverage rather than adding redundant tests.
+- Do not test incidental presentation details, such as a changed button color or CSS class, merely because they changed. Test them when they enforce a real requirement, such as accessibility or meaningful state.
+- Use visual inspection when more appropriate for cosmetic changes.
+- Prefer real dependencies when cheap, deterministic, and safe. Use mocks or fakes for slow, costly, nondeterministic, destructive, or external dependencies.
+- Do not change tests merely to make failures disappear.
 
-Use simple control flow. Prefer early returns for guards, and `if` / `else` for one paired decision.
+## Goal-Driven Execution
 
-Prefer immutable values. Use ternaries for simple conditional initialization; reassign only for real changing state.
-
-Avoid temporary variables unless they name an idea, remove repetition, or improve readability.
-
-Only catch errors when you can recover, add context, clean up, fall back, or convert them meaningfully.
-
-Avoid broad or unchecked types except at true unknown boundaries.
-
-Rely on inference when clear. Add explicit types, annotations, or schemas at public boundaries or when they improve readability.
-
-Use short names for local obvious values; use descriptive names across wider scopes.
-
-Keep object context visible. Prefer `user.name` over standalone `name` unless unpacking clearly reduces noise.
-
-Prefer collection transformations when they make data flow clearer. Use loops when they are simpler.
-
-Make validation or filtering explicit when it changes later assumptions.
-
-Use the simplest standard tool that fits. Reach lower-level only when more control is needed.
-
-Write comments to explain why, not to restate what.
-
-## Testing
-
-Test behavior, not duplicated implementation logic.
-
-Avoid mocks when the real thing is cheap, deterministic, and safe. Use mocks or fakes for slow, costly, nondeterministic, destructive, or external dependencies.
+- Turn the request into observable success criteria before implementing.
+- For multi-step work, give a brief plan pairing each step with its verification.
+- Reproduce bugs before fixing them; verify invalid inputs for validation changes and preserve behavior during refactors.
+- Work toward those criteria and verify the result. If a check fails, investigate and correct the cause rather than declaring completion.
+- Review the final diff for unintended changes and run relevant checks.
+- Report what changed, what was actually verified, and any remaining risks or verification gaps. Never claim checks passed unless they ran successfully.
