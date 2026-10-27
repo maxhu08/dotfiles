@@ -15,6 +15,8 @@ Do not assume, hide confusion, or skip tradeoffs.
 - Continue with follow-up questions until no unresolved decisions block implementation. Do not invent answers that materially affect behavior.
 - Avoid hypothetical cases or questions that would not change the approach. Explicitly agree on assumptions when uncertainty cannot be resolved.
 - After clarification, summarize the agreed behavior, approach, scope boundaries, and verification steps.
+- End the plan summary with a "Files to change" list covering each file to be modified or added. Format each entry as: `path/to/file` — Modify/Add: reason for the change.
+- Order the list in the logical sequence a developer would edit the files, with prerequisite changes before the files that depend on them, rather than alphabetically.
 
 ## Simplicity First
 
