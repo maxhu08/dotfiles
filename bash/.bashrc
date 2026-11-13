@@ -7,6 +7,12 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias zc='zi && code .'
+
+# zoxide directory navigation.
+if command -v zoxide > /dev/null 2>&1; then
+  eval "$(zoxide init bash)"
+fi
 
 # PS1='[\u@\h \W]\$ '
 

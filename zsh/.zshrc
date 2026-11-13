@@ -155,6 +155,7 @@ add-zsh-hook precmd zsh_refresh_prompt
 # aliases
 alias ls="eza --icons"
 alias treelist="tree -a -I '.git'"
+alias zc='zi && code .'
 
 # completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
