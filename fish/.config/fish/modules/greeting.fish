@@ -10,11 +10,3 @@ set fish_greeting (set_color --bold efcf40)">"(set_color ef9540)"<"(set_color ea
 if test -n "$KERNEL"
   set -a fish_greeting (set_color normal)"| $KERNEL"
 end
-
-# GitHub account welcome, managed by multigh.
-function fish_greeting
-  echo $fish_greeting
-  if command -sq mgh
-    command mgh internal welcome
-  end
-end
