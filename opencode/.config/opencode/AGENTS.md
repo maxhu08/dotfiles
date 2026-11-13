@@ -42,6 +42,7 @@ Every changed line should trace directly to the user's request.
 - Keep logic local unless extraction improves clarity, reuse, testing, composition, or correctness, or hides meaningful complexity.
 - Hide complex implementations behind small, clear interfaces. Expose only what callers need and keep internals private.
 - Own validation, invariants, and state transitions at the appropriate boundary. Make correct usage easy and invalid states or operation sequences difficult to express.
+- Avoid implicit state machines; represent lifecycle states and transitions explicitly.
 - Fix root causes where they belong rather than adding workarounds at every call site. Never conceal failures by weakening validation or swallowing errors.
 
 ## Code Style
