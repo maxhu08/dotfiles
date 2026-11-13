@@ -10,6 +10,7 @@ alias grep='grep --color=auto'
 alias zc='zi && code .'
 
 # zoxide directory navigation.
+export _ZO_FZF_OPTS='--height=~10 --layout=reverse --style=minimal --no-info --no-preview --no-sort'
 if command -v zoxide > /dev/null 2>&1; then
   eval "$(zoxide init bash)"
 fi

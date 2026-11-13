@@ -166,6 +166,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # starship, fzf, z
 eval "$(fzf --zsh)"
+export _ZO_FZF_OPTS='--height=~10 --layout=reverse --style=minimal --no-info --no-preview --no-sort'
 eval "$(zoxide init zsh)"
 
 typeset -gA ZSH_HIGHLIGHT_STYLES
