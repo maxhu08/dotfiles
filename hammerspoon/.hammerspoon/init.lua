@@ -1,4 +1,4 @@
 require("finder")
 require("displays")
-require("ghostty")
+require("rex")
 require("chatgpt")
